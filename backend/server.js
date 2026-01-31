@@ -2,7 +2,7 @@ import express from "express";
 import cors from "cors";
 import bodyParser from "body-parser";
 import dotenv from "dotenv";
-import requests from "axios";
+import { createClient } from "@supabase/supabase-js";
 
 import { ChatOpenAI } from "@langchain/openai";
 import { HumanMessage } from "@langchain/core/messages";
@@ -14,6 +14,12 @@ const port = 5000;
 
 app.use(cors());
 app.use(bodyParser.json());
+
+// Initialize Supabase client
+const supabase = createClient(
+  process.env.SUPABASE_URL,
+  process.env.SUPABASE_ANON_KEY
+);
 
 const llm = new ChatOpenAI({
   model: "openai/gpt-4o-mini",
@@ -27,48 +33,64 @@ const llm = new ChatOpenAI({
   }
 });
 
-// Get Bearer Token
-async function getToken() {
+// Fetch data from Supabase tables
+async function fetchSupabaseData() {
   try {
-    const response = await requests.post(
-      "http://ec2-34-234-69-85.compute-1.amazonaws.com/api/account-management/login/",
-      {
-        username: "VesitAdmin",
-        password: "Abcde@12345",
-      }
-    );
-    return response.data.access;
+    // Fetch data from multiple relevant tables for report generation
+    const [
+      //admissions,
+      students,
+      //programs,
+      //faculty,
+      //courses,
+      //placements,
+      //feedback,
+      //competitiveExams
+    ] = await Promise.all([
+      //supabase.from("admission_statistics").select("*"),
+      supabase.from("student").select("*").limit(1),
+      //supabase.from("program").select("*"),
+      //supabase.from("faculty").select("*"),
+      //supabase.from("course").select("*"),
+      //supabase.from("placement").select("*"),
+      //supabase.from("feedback").select("*"),
+      //supabase.from("competitive_exam_summary").select("*")
+    ]);
+
+    // Check for errors
+    const errors = [
+      //admissions.error,
+      students.error,
+      //programs.error,
+      //faculty.error,
+      //courses.error,
+      //placements.error,
+      //feedback.error,
+      //competitiveExams.error
+    ].filter(e => e);
+
+    if (errors.length > 0) {
+      console.error("Supabase errors:", errors);
+      return null;
+    }
+
+    // Combine all data
+    const combinedData = {
+      //admission_statistics: admissions.data || [],
+      students: students.data || [],
+      //programs: programs.data || [],
+      //faculty: faculty.data || [],
+      //courses: courses.data || [],
+      //placements: placements.data || [],
+      //feedback: feedback.data || [],
+      //competitive_exams: competitiveExams.data || []
+    };
+    console.log("Fetched Supabase data:", combinedData);
+    return combinedData;
   } catch (error) {
-    console.error("Error fetching token:", error);
+    console.error("Error fetching from Supabase:", error);
     return null;
   }
-}
-
-// Fetch Events Data
-async function fetchEvents() {
-  const apiUrl = "http://ec2-34-234-69-85.compute-1.amazonaws.com/api/events-management/event-types/1";
-  const accessToken = await getToken();
-
-  if (!accessToken) {
-    return "Error: Unable to fetch token";
-  }
-
-  try {
-    const response = await requests.get(apiUrl, {
-      headers: { Authorization: `Bearer ${accessToken}` }
-    });
-    return JSON.stringify(response.data);
-  } catch (error) {
-    return `Error fetching data: ${error.message}`;
-  }
-}
-
-// Tool execution
-async function executeTool(toolName) {
-  if (toolName === "fetch_events") {
-    return await fetchEvents();
-  }
-  return "Tool not found";
 }
 
 app.get("/", (req, res) => {
@@ -93,7 +115,6 @@ app.post("/", async (req, res) => {
 });
 
 // Report generation endpoint
-// Report generation endpoint
 app.post("/generate-report", async (req, res) => {
   const { template } = req.body;
 
@@ -102,8 +123,13 @@ app.post("/generate-report", async (req, res) => {
   }
 
   try {
-    const eventData = await fetchEvents();
-    const userPrompt = `You have this event data:\n\n${eventData}\n\nNow generate a report strictly following this template:\n\n${template}`;
+    const eventData = await fetchSupabaseData();
+
+    if (!eventData) {
+      return res.status(500).json({ error: "Failed to fetch data from Supabase" });
+    }
+
+    const userPrompt = `You have this event and institutional data:\n\n${JSON.stringify(eventData, null, 2)}\n\nNow generate a report strictly following this template:\n\n${template}`;
 
     const response = await llm.invoke([
       new HumanMessage(userPrompt),

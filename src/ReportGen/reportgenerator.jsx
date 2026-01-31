@@ -87,6 +87,7 @@ const ReportGenerator = () => {
     });
   };
 
+// ...existing code...
   const handleGenerateReport = async () => {
     if (!template.trim()) {
       alert("Please provide a report template or upload a file.");
@@ -104,17 +105,28 @@ const ReportGenerator = () => {
         body: JSON.stringify({ template }),
       });
 
-      if (!res.ok) throw new Error(`HTTP ${res.status}`);
+      const raw = await res.text();
+      let data;
+      try {
+        data = JSON.parse(raw);
+      } catch {
+        throw new Error(`Non-JSON response: ${raw}`);
+      }
 
-      const data = await res.json();
-      setGeneratedReport(data.report);
+      if (!res.ok) {
+        throw new Error(data?.error || `HTTP ${res.status}`);
+      }
+
+      console.log('Generated report:', data.report);
+      setGeneratedReport(data.report || "");
     } catch (err) {
       console.error('Report generation failed:', err);
-      alert('Failed to generate report');
+      alert(`Failed to generate report: ${err.message}`);
     } finally {
       setIsLoading(false);
     }
   };
+// ...existing code...
 
   const downloadReport = () => {
     const element = document.createElement("a");
