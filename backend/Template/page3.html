@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>PART A: Institutional Information</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    @page { size: A4; margin: 0; }
+    body {
+      font-family: Arial, sans-serif;
+      width: 210mm;
+      height: 297mm;
+      margin: 0 auto;
+      background: white;
+      font-size: 13px;
+      line-height: 1.5;
+    }
+    .page {
+      width: 100%;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      padding: 30px 50px;
+    }
+    .header-bar {
+      background: #4472C4;
+      color: white;
+      padding: 8px 16px;
+      text-align: right;
+      font-size: 13px;
+      font-weight: bold;
+      margin-bottom: 20px;
+    }
+    .title {
+      text-align: center;
+      font-weight: bold;
+      font-size: 18px;
+      margin-bottom: 25px;
+    }
+    .section-item {
+      margin-bottom: 20px;
+    }
+    .question {
+      font-weight: bold;
+      margin-bottom: 10px;
+      font-size: 14px;
+    }
+    table.checkbox-table {
+      border: none;
+      margin-top: 0;
+      margin-left: 25px;
+      font-size: 12px;
+      width: auto;
+    }
+    table.checkbox-table td {
+      border: none;
+      padding: 4px 0;
+    }
+    table.checkbox-table td:first-child {
+      width: auto;
+    }
+    table.checkbox-table td:last-child {
+      width: 20px;
+      text-align: right;
+      padding-left: 12px;
+    }
+    .checkbox {
+      width: 16px;
+      height: 16px;
+      border: 2px solid #000;
+      display: inline-block;
+    }
+    .note {
+      margin-left: 25px;
+      margin-top: 10px;
+      font-size: 11px;
+      line-height: 1.6;
+      color: #333;
+    }
+    .note ul {
+      margin-left: 20px;
+      margin-top: 8px;
+    }
+    .note li {
+      margin-bottom: 8px;
+    }
+    .input-line {
+      border-bottom: 1px solid #000;
+      display: inline-block;
+      min-width: 350px;
+      margin-left: 8px;
+      height: 20px;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 10px;
+      font-size: 11px;
+    }
+    th, td {
+      border: 1px solid #000;
+      padding: 6px 8px;
+      text-align: left;
+    }
+    th {
+      background: #e8e8e8;
+      font-weight: bold;
+      text-align: center;
+      font-size: 11px;
+    }
+    .table-title {
+      font-weight: bold;
+      font-size: 11px;
+      margin-top: 8px;
+      margin-bottom: 6px;
+    }
+    .footer-line {
+      margin-top: auto;
+      border-top: 2px solid #333;
+      width: 100%;
+    }
+    .page-number {
+      text-align: center;
+      font-size: 12px;
+      margin-top: 8px;
+    }
+  </style>
+</head>
+<body>
+  <div class="page">
+    <div class="header-bar">NATIONAL BOARD OF ACCREDITATION</div>
+    <div class="title">PART A: Institutional Information</div>
+
+    <div class="section-item">
+      <div class="question">1. Name and Address of the Institution:</div>
+    </div>
+
+    <div class="section-item">
+      <div class="question">2. Type of the Institution: (Tick the applicable choice)</div>
+      <table class="checkbox-table">
+        <tr>
+          <td>Institute of National Importance</td>
+          <td><span class="checkbox"></span></td>
+        </tr>
+        <tr>
+          <td>Deemed to be University</td>
+          <td><span class="checkbox"></span></td>
+        </tr>
+        <tr>
+          <td>University</td>
+          <td><span class="checkbox"></span></td>
+        </tr>
+        <tr>
+          <td>Autonomous</td>
+          <td><span class="checkbox"></span></td>
+        </tr>
+        <tr>
+          <td>Non-Autonomous (Affiliated)</td>
+          <td><span class="checkbox"></span></td>
+        </tr>
+        <tr>
+          <td>Any Other (Please specify*)</td>
+          <td><span class="checkbox"></span></td>
+        </tr>
+      </table>
+      <div style="margin-left: 28px; margin-top: 8px;">
+        *Provide Details: <span class="input-line"></span>
+      </div>
+      <div class="note">
+        <strong>Note:</strong>
+        <ul>
+          <li>In case of Autonomous Institution/Deemed University, mention the year of grant of status by the authority. In case of autonomous institution, mention year of grant of autonomy status</li>
+          <li>In case of University Constituent Institution, please indicate the academic autonomy status of the Institution as defined in 12<sup>th</sup> Plan guidelines of UGC. Please mention year of grant of status of being academically autonomous</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="section-item">
+      <div class="question">3. Year of Establishment of the Institution:</div>
+    </div>
+
+    <div class="section-item">
+      <div class="question">4. Ownership Status: (Tick the applicable choice)</div>
+      <table class="checkbox-table">
+        <tr>
+          <td>Central Government</td>
+          <td><span class="checkbox"></span></td>
+        </tr>
+        <tr>
+          <td>State Government</td>
+          <td><span class="checkbox"></span></td>
+        </tr>
+        <tr>
+          <td>Grant-in-Aid</td>
+          <td><span class="checkbox"></span></td>
+        </tr>
+        <tr>
+          <td>Self-financing/Trust</td>
+          <td><span class="checkbox"></span></td>
+        </tr>
+        <tr>
+          <td>Any Other (Please specify*)</td>
+          <td><span class="checkbox"></span></td>
+        </tr>
+      </table>
+      <div style="margin-left: 28px; margin-top: 8px;">
+        *Provide Details: <span class="input-line"></span>
+      </div>
+    </div>
+
+    <div class="section-item">
+      <div class="question">5. Name and Address of the Affiliating University (if any):</div>
+    </div>
+
+    <div class="section-item">
+      <div class="question">6. Other Academic Institutions Run by Trust/Society/etc., if any:</div>
+      <div class="table-title">Table No. A6: List of all Institutions running under the same trust/society</div>
+      <table>
+        <thead>
+          <tr>
+            <th style="width: 8%;">S. N.</th>
+            <th style="width: 35%;">Name of the Institution(s)</th>
+            <th style="width: 18%;">Year of Establishment</th>
+            <th style="width: 25%;">Programs of Study</th>
+            <th style="width: 14%;">Location</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td style="text-align: center;">1</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td style="text-align: center;">...</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</body>
+</html>
