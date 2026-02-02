@@ -7,7 +7,8 @@ import { fileURLToPath } from 'url';
 import { dirname } from 'path';
 import { createClient } from '@supabase/supabase-js';
 import dotenv from 'dotenv';
-import { generatePage4, generatePage5 } from './utils/pageGenerator.js';
+import { generatePage4, generatePage5, generatePage6, generatePage7, generatePage8, generatePage9 } from './utils/pageGenerator.js';
+import { generatePage9Content } from './utils/llmGenerator.js';
 dotenv.config();
 
 const __filename = fileURLToPath(import.meta.url);
@@ -46,8 +47,20 @@ app.get('/download/pdf', async (req, res) => {
       .from('department')
       .select('*');
 
-    if (instError || progError || deptError) {
-      console.error('Supabase error:', instError || progError || deptError);
+    const { data: facultyData, error: facError } = await supabase
+      .from('faculty')
+      .select('*');
+
+    const { data: studentsData, error: studError } = await supabase
+      .from('student')
+      .select('*');
+
+    const { data: peosData, error: peosError } = await supabase
+      .from('program_educational_objective')
+      .select('*');
+
+    if (instError || progError || deptError || facError || studError || peosError) {
+      console.error('Supabase error:', instError || progError || deptError || facError || studError || peosError);
       return res.status(500).json({ error: 'Failed to fetch data' });
     }
 
@@ -58,7 +71,11 @@ app.get('/download/pdf', async (req, res) => {
     const page2 = fs.readFileSync(path.join(__dirname, 'Template', 'page2.html'), 'utf8');
     let page3 = fs.readFileSync(path.join(__dirname, 'Template', 'page3.html'), 'utf8');
     const page4Template = fs.readFileSync(path.join(__dirname, 'Template', 'page4.html'), 'utf8');
-  const page5Template = fs.readFileSync(path.join(__dirname, 'Template', 'page5.html'), 'utf8');
+    const page9Template = fs.readFileSync(path.join(__dirname, 'Template', 'page9.html'), 'utf8');
+    const page5Template = fs.readFileSync(path.join(__dirname, 'Template', 'page5.html'), 'utf8');
+    const page6Template = fs.readFileSync(path.join(__dirname, 'Template', 'page6.html'), 'utf8');
+    const page7Template = fs.readFileSync(path.join(__dirname, 'Template', 'page7.html'), 'utf8');
+    const page8Template = fs.readFileSync(path.join(__dirname, 'Template', 'page8.html'), 'utf8');
 
 
     // Fill page 3
@@ -76,6 +93,21 @@ app.get('/download/pdf', async (req, res) => {
     // Generate page 4 with data
     const page4 = generatePage4(page4Template, programsData, departmentsData);
     const page5 = generatePage5(page5Template, programsData, departmentsData);
+    const page6 = generatePage6(page6Template, facultyData, departmentsData);
+    const page7 = generatePage7(page7Template, studentsData, programsData, departmentsData, institutionData);
+    const page8 = generatePage8(page8Template, programsData);
+    
+    // Generate page9 with LLM content (use first program for now)
+    const firstProgram = programsData && programsData.length > 0 ? programsData[0] : null;
+    const deptForProg = firstProgram ? departmentsData.find(d => d.department_id === firstProgram.department_id) : departmentsData[0];
+    let peosForProg = peosData ? peosData.filter(p => p.program_id === firstProgram?.programme_id) : [];
+    if (!peosForProg || peosForProg.length === 0) {
+      peosForProg = peosData || [];
+    }
+    console.log('PEOs total:', peosData?.length || 0, 'PEOs used:', peosForProg.length, 'Program ID:', firstProgram?.programme_id || 'N/A');
+    
+    const llmContent = await generatePage9Content(firstProgram || {}, deptForProg || {}, peosForProg);
+    const page9 = await generatePage9(page9Template, llmContent);
     const combinedHtml = `
       <!DOCTYPE html>
       <html>
@@ -94,7 +126,15 @@ app.get('/download/pdf', async (req, res) => {
         <div class="page-break"></div>
         ${page4}
         <div class="page-break"></div>
-       ${page5}
+        ${page5}
+        <div class="page-break"></div>
+        ${page6}
+        <div class="page-break"></div>
+        ${page7}
+        <div class="page-break"></div>
+        ${page8}
+        <div class="page-break"></div>
+        ${page9}
       </body>
       </html>
     `;

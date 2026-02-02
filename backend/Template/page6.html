@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Faculty Members Details</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: Arial, sans-serif;
+      width: 210mm;
+      background: white;
+      font-size: 13px;
+      line-height: 1.5;
+    }
+    .page {
+      width: 100%;
+      padding: 25px 35px 40px 35px;
+    }
+    .header-bar {
+      background: #4472C4;
+      color: white;
+      padding: 8px 16px;
+      text-align: right;
+      font-size: 13px;
+      font-weight: bold;
+      margin-bottom: 15px;
+    }
+    .section-number {
+      font-weight: bold;
+      font-size: 13px;
+      margin-bottom: 8px;
+    }
+    .table-title {
+      font-weight: bold;
+      font-size: 11px;
+      margin-top: 6px;
+      margin-bottom: 4px;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 8px;
+      font-size: 9px;
+    }
+    th, td {
+      border: 1px solid #000;
+      padding: 4px 3px;
+      text-align: center;
+      vertical-align: middle;
+      word-wrap: break-word;
+    }
+    th {
+      background: #FBE4D5;
+      font-weight: bold;
+      font-size: 8.5px;
+      line-height: 1.3;
+    }
+    .header-group {
+      background: #FBE4D5;
+      font-weight: bold;
+      font-size: 9px;
+      padding: 5px 3px;
+    }
+    .dept-name-col {
+      text-align: left;
+      padding-left: 6px;
+    }
+    .note-text {
+      margin-left: 15px;
+      font-size: 10px;
+      margin-top: 10px;
+      line-height: 1.6;
+    }
+    .note-text p {
+      margin-bottom: 6px;
+      text-align: justify;
+    }
+    .note-text ul {
+      margin-left: 18px;
+      margin-top: 4px;
+      margin-bottom: 6px;
+    }
+    .note-text li {
+      margin-bottom: 4px;
+    }
+    .note-text ol {
+      margin-left: 18px;
+      margin-top: 4px;
+    }
+    .note-heading {
+      font-weight: bold;
+      margin-bottom: 4px;
+    }
+    .formula-text {
+      margin-left: 15px;
+      font-size: 10px;
+      margin-top: 8px;
+      margin-bottom: 4px;
+    }
+  </style>
+</head>
+<body>
+  <div class="page">
+    <div class="header-bar">NATIONAL BOARD OF ACCREDITATION</div>
+    
+    <div class="section-number">9. Total Number of Faculty Members in Various Departments:</div>
+    
+    <div class="table-title">Table No. A9: No. of Faculty members in various departments.</div>
+    <table id="facultyTable">
+      <thead>
+        <tr>
+          <th rowspan="3" style="width: 4%;">S.N.</th>
+          <th rowspan="3" style="width: 18%;">Name of the Department</th>
+          <th colspan="12" class="header-group" style="font-size: 9px;">Number of faculty members in the Department (UG and PG)</th>
+        </tr>
+        <tr>
+          <th colspan="4" class="header-group">CAY</th>
+          <th colspan="4" class="header-group">CAYm1</th>
+          <th colspan="4" class="header-group">CAYm2</th>
+        </tr>
+        <tr>
+          <th style="width: 4.5%;">No. of Prof.</th>
+          <th style="width: 6%;">No. of Assoc. Prof.</th>
+          <th style="width: 6%;">No. of Asst. Prof.</th>
+          <th style="width: 5%;">Total faculty</th>
+          <th style="width: 4.5%;">No. of Prof.</th>
+          <th style="width: 6%;">No. of Assoc. Prof.</th>
+          <th style="width: 6%;">No. of Asst. Prof.</th>
+          <th style="width: 5%;">Total faculty</th>
+          <th style="width: 4.5%;">No. of Prof.</th>
+          <th style="width: 6%;">No. of Assoc. Prof.</th>
+          <th style="width: 6%;">No. of Asst. Prof.</th>
+          <th style="width: 5%;">Total faculty</th>
+        </tr>
+      </thead>
+      <tbody>
+        <!-- Data rows will be inserted here -->
+      </tbody>
+    </table>
+
+    <div class="formula-text">
+      <strong>CAY=</strong>Current Academic Year<br>
+      <strong>CAYm1=</strong> Current Academic Year Minus1= Current Assessment Year<br>
+      <strong>CAYm2=</strong> Current Academic Year Minus2=Current Assessment Year Minus 1.
+    </div>
+    
+    <div class="note-text">
+      <p class="note-heading">Note:</p>
+      <p style="margin-left: 0; text-align: justify;">
+        All the faculty whether regular or contractual (except part-time or hourly based), 
+        will be considered. All regular faculty members shall meet the AICTE 
+        qualifications and experience requirements.
+      </p>
+      <p style="margin-left: 0; text-align: justify;">
+        The contractual faculty appointed with any terminology whatsoever, who have 
+        taught for 2 consecutive semesters with or without break between the 2 
+        semesters in corresponding academic year on full-time basis shall be considered 
+        for the purpose mentioned in the faculty student ratio. However, following will 
+        be ensured in case of contractual faculty.
+      </p>
+      <ul>
+        <li>Shall have the AICTE prescribed qualifications and experience.</li>
+        <li>Shall be appointed on full time basis and worked for consecutive two 
+        semesters with or without break between the 2 semesters during the 
+        corresponding academic year.</li>
+        <li>Should have gone through an appropriate process of selection and the 
+        records for the same shall be made available to the visiting team on NBA 
+        visit.</li>
+      </ul>
+      <ol type="A" style="margin-left: 20px; margin-top: 8px;">
+        <li style="margin-bottom: 5px;">Faculty members in the Department who do not have teaching, or practical 
+        loads, will not be counted.</li>
+        <li style="margin-bottom: 5px;">Director/ Principal/ Dean/ other academic/administrative posts, who has 
+        teaching/ practical load in the Department will be counted.</li>
+        <li style="margin-bottom: 5px;">Visiting faculty/adjunct faculty, who are working on hourly based faculty will 
+        not be counted.</li>
+      </ol>
+    </div>
+  </div>
+</body>
+</html>

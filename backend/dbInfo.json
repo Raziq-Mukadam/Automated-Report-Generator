@@ -1,0 +1,3003 @@
+{
+  "governing_body": {
+    "row_count": 2,
+    "columns": [
+      {
+        "column_name": "gb_id",
+        "data_type": "uuid",
+        "is_nullable": "NO",
+        "column_default": "gen_random_uuid()"
+      },
+      {
+        "column_name": "member_name",
+        "data_type": "character varying",
+        "is_nullable": "NO",
+        "column_default": null
+      },
+      {
+        "column_name": "institution_id",
+        "data_type": "uuid",
+        "is_nullable": "NO",
+        "column_default": null
+      },
+      {
+        "column_name": "designation",
+        "data_type": "character varying",
+        "is_nullable": "NO",
+        "column_default": null
+      },
+      {
+        "column_name": "body_category",
+        "data_type": "USER-DEFINED",
+        "is_nullable": "NO",
+        "column_default": null
+      },
+      {
+        "column_name": "formation_year",
+        "data_type": "integer",
+        "is_nullable": "YES",
+        "column_default": null
+      },
+      {
+        "column_name": "meetings_per_year",
+        "data_type": "integer",
+        "is_nullable": "YES",
+        "column_default": null
+      },
+      {
+        "column_name": "term_end",
+        "data_type": "integer",
+        "is_nullable": "YES",
+        "column_default": null
+      },
+      {
+        "column_name": "created_at",
+        "data_type": "timestamp with time zone",
+        "is_nullable": "YES",
+        "column_default": "now()"
+      },
+      {
+        "column_name": "updated_at",
+        "data_type": "timestamp with time zone",
+        "is_nullable": "YES",
+        "column_default": "now()"
+      }
+    ],
+    "sample_rows": [
+      {
+        "gb_id": "fe7bb1ab-651c-4a5d-a826-5f5b8e1dffe1",
+        "member_name": "Shri. B. L. Boolani",
+        "institution_id": "3f778595-a367-490d-9f02-dfef355ecd1b",
+        "designation": "President",
+        "body_category": "GC",
+        "formation_year": 2022,
+        "meetings_per_year": 4,
+        "term_end": 2027,
+        "created_at": "2026-01-31T09:15:01.603009+00:00",
+        "updated_at": "2026-01-31T09:15:01.603009+00:00"
+      },
+      {
+        "gb_id": "69959542-9f88-4606-a077-d253b14091f6",
+        "member_name": "Dr. J. M. Nair",
+        "institution_id": "3f778595-a367-490d-9f02-dfef355ecd1b",
+        "designation": "Principal",
+        "body_category": "GC",
+        "formation_year": 2022,
+        "meetings_per_year": 4,
+        "term_end": 2027,
+        "created_at": "2026-01-31T09:15:01.603009+00:00",
+        "updated_at": "2026-01-31T09:15:01.603009+00:00"
+      }
+    ]
+  },
+  "department": {
+    "row_count": 5,
+    "columns": [
+      {
+        "column_name": "department_id",
+        "data_type": "uuid",
+        "is_nullable": "NO",
+        "column_default": "gen_random_uuid()"
+      },
+      {
+        "column_name": "institution_id",
+        "data_type": "uuid",
+        "is_nullable": "NO",
+        "column_default": null
+      },
+      {
+        "column_name": "department_name",
+        "data_type": "character varying",
+        "is_nullable": "NO",
+        "column_default": null
+      },
+      {
+        "column_name": "vision",
+        "data_type": "text",
+        "is_nullable": "YES",
+        "column_default": null
+      },
+      {
+        "column_name": "mission",
+        "data_type": "text",
+        "is_nullable": "YES",
+        "column_default": null
+      },
+      {
+        "column_name": "year_established",
+        "data_type": "integer",
+        "is_nullable": "YES",
+        "column_default": null
+      },
+      {
+        "column_name": "hod_name",
+        "data_type": "character varying",
+        "is_nullable": "YES",
+        "column_default": null
+      },
+      {
+        "column_name": "created_at",
+        "data_type": "timestamp with time zone",
+        "is_nullable": "YES",
+        "column_default": "now()"
+      },
+      {
+        "column_name": "updated_at",
+        "data_type": "timestamp with time zone",
+        "is_nullable": "YES",
+        "column_default": "now()"
+      }
+    ],
+    "sample_rows": [
+      {
+        "department_id": "8e71566a-03cf-4bb1-ad16-89e0e0d5036a",
+        "institution_id": "3f778595-a367-490d-9f02-dfef355ecd1b",
+        "department_name": "Department of Computer Engineering",
+        "vision": "Vision...",
+        "mission": "Mission...",
+        "year_established": 1984,
+        "hod_name": "Dr. Nupur Giri",
+        "created_at": "2026-01-31T09:07:27.841347+00:00",
+        "updated_at": "2026-01-31T09:07:27.841347+00:00"
+      },
+      {
+        "department_id": "f9776efb-58c0-45ac-a36d-eca6b327b890",
+        "institution_id": "3f778595-a367-490d-9f02-dfef355ecd1b",
+        "department_name": "Department of Information Technology",
+        "vision": "Vision...",
+        "mission": "Mission...",
+        "year_established": 1999,
+        "hod_name": "Dr. Shalu Chopra",
+        "created_at": "2026-01-31T09:07:27.841347+00:00",
+        "updated_at": "2026-01-31T09:07:27.841347+00:00"
+      },
+      {
+        "department_id": "d464954a-d499-465d-90b0-4ac0ec4abef1",
+        "institution_id": "3f778595-a367-490d-9f02-dfef355ecd1b",
+        "department_name": "Department of AI & Data Science",
+        "vision": "Vision...",
+        "mission": "Mission...",
+        "year_established": 2020,
+        "hod_name": "Dr. Vijayalakshmi M.",
+        "created_at": "2026-01-31T09:07:27.841347+00:00",
+        "updated_at": "2026-01-31T09:07:27.841347+00:00"
+      }
+    ]
+  },
+  "program_educational_objective": {
+    "row_count": 15,
+    "columns": [
+      {
+        "column_name": "peo_id",
+        "data_type": "uuid",
+        "is_nullable": "NO",
+        "column_default": "gen_random_uuid()"
+      },
+      {
+        "column_name": "peo_statement",
+        "data_type": "text",
+        "is_nullable": "NO",
+        "column_default": null
+      },
+      {
+        "column_name": "program_id",
+        "data_type": "uuid",
+        "is_nullable": "NO",
+        "column_default": null
+      },
+      {
+        "column_name": "created_at",
+        "data_type": "timestamp with time zone",
+        "is_nullable": "YES",
+        "column_default": "now()"
+      },
+      {
+        "column_name": "updated_at",
+        "data_type": "timestamp with time zone",
+        "is_nullable": "YES",
+        "column_default": "now()"
+      }
+    ],
+    "sample_rows": [
+      {
+        "peo_id": "38340056-2386-40a1-bfe8-415dbf423965",
+        "peo_statement": "PEO 1",
+        "program_id": "ce472bb9-b9af-4c29-b248-83a6c9be6cd3",
+        "created_at": "2026-01-31T09:39:48.874489+00:00",
+        "updated_at": "2026-01-31T09:39:48.874489+00:00"
+      },
+      {
+        "peo_id": "70bce366-d46d-4aa5-89bb-42bb9485e539",
+        "peo_statement": "PEO 2",
+        "program_id": "ce472bb9-b9af-4c29-b248-83a6c9be6cd3",
+        "created_at": "2026-01-31T09:39:48.874489+00:00",
+        "updated_at": "2026-01-31T09:39:48.874489+00:00"
+      },
+      {
+        "peo_id": "5c244a88-0e3a-4303-8e5e-bd78f2fabc14",
+        "peo_statement": "PEO 3",
+        "program_id": "ce472bb9-b9af-4c29-b248-83a6c9be6cd3",
+        "created_at": "2026-01-31T09:39:48.874489+00:00",
+        "updated_at": "2026-01-31T09:39:48.874489+00:00"
+      }
+    ]
+  },
+  "faculty_publication": {
+    "row_count": 53,
+    "columns": [
+      {
+        "column_name": "publication_id",
+        "data_type": "uuid",
+        "is_nullable": "NO",
+        "column_default": "gen_random_uuid()"
+      },
+      {
+        "column_name": "faculty_id",
+        "data_type": "uuid",
+        "is_nullable": "NO",
+        "column_default": null
+      },
+      {
+        "column_name": "indexing",
+        "data_type": "USER-DEFINED",
+        "is_nullable": "NO",
+        "column_default": null
+      },
+      {
+        "column_name": "publication_year",
+        "data_type": "integer",
+        "is_nullable": "YES",
+        "column_default": null
+      },
+      {
+        "column_name": "created_at",
+        "data_type": "timestamp with time zone",
+        "is_nullable": "YES",
+        "column_default": "now()"
+      },
+      {
+        "column_name": "updated_at",
+        "data_type": "timestamp with time zone",
+        "is_nullable": "YES",
+        "column_default": "now()"
+      }
+    ],
+    "sample_rows": [
+      {
+        "publication_id": "d585cf51-2a1b-4c3d-5e6f-123456789001",
+        "faculty_id": "fc4bbd40-7e12-4c6e-8a9d-123456789001",
+        "indexing": "Scopus",
+        "publication_year": 2024,
+        "created_at": "2026-01-31T09:59:21.984362+00:00",
+        "updated_at": "2026-01-31T09:59:21.984362+00:00"
+      },
+      {
+        "publication_id": "93d777d7-3b2c-5d4e-6f7a-123456789002",
+        "faculty_id": "250653fc-8a1b-4c2d-9e3f-123456789002",
+        "indexing": "Scopus",
+        "publication_year": 2024,
+        "created_at": "2026-01-31T09:59:21.984362+00:00",
+        "updated_at": "2026-01-31T09:59:21.984362+00:00"
+      },
+      {
+        "publication_id": "e45d252f-4c3d-6e5f-7a8b-123456789003",
+        "faculty_id": "8aa71cf4-9b2c-5d3e-0f4a-123456789003",
+        "indexing": "Scopus",
+        "publication_year": 2024,
+        "created_at": "2026-01-31T09:59:21.984362+00:00",
+        "updated_at": "2026-01-31T09:59:21.984362+00:00"
+      }
+    ]
+  },
+  "program": {
+    "row_count": 5,
+    "columns": [
+      {
+        "column_name": "programme_id",
+        "data_type": "uuid",
+        "is_nullable": "NO",
+        "column_default": "gen_random_uuid()"
+      },
+      {
+        "column_name": "department_id",
+        "data_type": "uuid",
+        "is_nullable": "NO",
+        "column_default": null
+      },
+      {
+        "column_name": "programme_name",
+        "data_type": "character varying",
+        "is_nullable": "NO",
+        "column_default": null
+      },
+      {
+        "column_name": "degree_title",
+        "data_type": "character varying",
+        "is_nullable": "NO",
+        "column_default": null
+      },
+      {
+        "column_name": "level",
+        "data_type": "USER-DEFINED",
+        "is_nullable": "NO",
+        "column_default": null
+      },
+      {
+        "column_name": "year_started",
+        "data_type": "integer",
+        "is_nullable": "YES",
+        "column_default": null
+      },
+      {
+        "column_name": "sanctioned_intake",
+        "data_type": "integer",
+        "is_nullable": "YES",
+        "column_default": null
+      },
+      {
+        "column_name": "accreditation_status",
+        "data_type": "USER-DEFINED",
+        "is_nullable": "YES",
+        "column_default": "'Not Accredited'::accreditation_status_enum"
+      },
+      {
+        "column_name": "nba_tier",
+        "data_type": "USER-DEFINED",
+        "is_nullable": "YES",
+        "column_default": null
+      },
+      {
+        "column_name": "created_at",
+        "data_type": "timestamp with time zone",
+        "is_nullable": "YES",
+        "column_default": "now()"
+      },
+      {
+        "column_name": "updated_at",
+        "data_type": "timestamp with time zone",
+        "is_nullable": "YES",
+        "column_default": "now()"
+      }
+    ],
+    "sample_rows": [
+      {
+        "programme_id": "ce472bb9-b9af-4c29-b248-83a6c9be6cd3",
+        "department_id": "8e71566a-03cf-4bb1-ad16-89e0e0d5036a",
+        "programme_name": "B.E. CMPN",
+        "degree_title": "Bachelor of Engineering",
+        "level": "UG",
+        "year_started": 1984,
+        "sanctioned_intake": 180,
+        "accreditation_status": "Accredited",
+        "nba_tier": "I",
+        "created_at": "2026-01-31T09:20:03.129477+00:00",
+        "updated_at": "2026-01-31T09:20:03.129477+00:00"
+      },
+      {
+        "programme_id": "278b4def-4b41-4dd8-9958-ca28ad0cf58d",
+        "department_id": "f9776efb-58c0-45ac-a36d-eca6b327b890",
+        "programme_name": "B.E. INFT",
+        "degree_title": "Bachelor of Engineering",
+        "level": "UG",
+        "year_started": 1999,
+        "sanctioned_intake": 180,
+        "accreditation_status": "Accredited",
+        "nba_tier": "I",
+        "created_at": "2026-01-31T09:20:03.129477+00:00",
+        "updated_at": "2026-01-31T09:20:03.129477+00:00"
+      },
+      {
+        "programme_id": "a742b501-9439-4ded-b129-ef95f65efec6",
+        "department_id": "d464954a-d499-465d-90b0-4ac0ec4abef1",
+        "programme_name": "B.E. AIDS",
+        "degree_title": "Bachelor of Engineering",
+        "level": "UG",
+        "year_started": 2020,
+        "sanctioned_intake": 120,
+        "accreditation_status": "Accredited",
+        "nba_tier": "I",
+        "created_at": "2026-01-31T09:20:03.129477+00:00",
+        "updated_at": "2026-01-31T09:20:03.129477+00:00"
+      }
+    ]
+  },
+  "program_outcome": {
+    "row_count": 12,
+    "columns": [
+      {
+        "column_name": "po_id",
+        "data_type": "uuid",
+        "is_nullable": "NO",
+        "column_default": "gen_random_uuid()"
+      },
+      {
+        "column_name": "po_code",
+        "data_type": "character varying",
+        "is_nullable": "NO",
+        "column_default": null
+      },
+      {
+        "column_name": "po_statement",
+        "data_type": "text",
+        "is_nullable": "NO",
+        "column_default": null
+      },
+      {
+        "column_name": "category",
+        "data_type": "character varying",
+        "is_nullable": "YES",
+        "column_default": null
+      },
+      {
+        "column_name": "created_at",
+        "data_type": "timestamp with time zone",
+        "is_nullable": "YES",
+        "column_default": "now()"
+      },
+      {
+        "column_name": "updated_at",
+        "data_type": "timestamp with time zone",
+        "is_nullable": "YES",
+        "column_default": "now()"
+      }
+    ],
+    "sample_rows": [
+      {
+        "po_id": "709a7ec4-2679-4c65-af30-03d9d868b160",
+        "po_code": "PO1",
+        "po_statement": "Apply knowledge of mathematics, science, engineering fundamentals.",
+        "category": "Core",
+        "created_at": "2026-01-31T09:03:04.05727+00:00",
+        "updated_at": "2026-01-31T09:03:04.05727+00:00"
+      },
+      {
+        "po_id": "941e91ed-16c3-4362-beaf-b9561aa65277",
+        "po_code": "PO2",
+        "po_statement": "Identify, formulate, review research literature, and analyze complex engineering problems.",
+        "category": "Core",
+        "created_at": "2026-01-31T09:03:04.05727+00:00",
+        "updated_at": "2026-01-31T09:03:04.05727+00:00"
+      },
+      {
+        "po_id": "42001989-0ea8-4c7b-9e3e-ec62d41410cb",
+        "po_code": "PO3",
+        "po_statement": "Design solutions for complex engineering problems.",
+        "category": "Core",
+        "created_at": "2026-01-31T09:03:04.05727+00:00",
+        "updated_at": "2026-01-31T09:03:04.05727+00:00"
+      }
+    ]
+  },
+  "program_specific_outcome": {
+    "row_count": 10,
+    "columns": [
+      {
+        "column_name": "pso_id",
+        "data_type": "uuid",
+        "is_nullable": "NO",
+        "column_default": "gen_random_uuid()"
+      },
+      {
+        "column_name": "pso_statement",
+        "data_type": "text",
+        "is_nullable": "NO",
+        "column_default": null
+      },
+      {
+        "column_name": "program_id",
+        "data_type": "uuid",
+        "is_nullable": "NO",
+        "column_default": null
+      },
+      {
+        "column_name": "created_at",
+        "data_type": "timestamp with time zone",
+        "is_nullable": "YES",
+        "column_default": "now()"
+      },
+      {
+        "column_name": "updated_at",
+        "data_type": "timestamp with time zone",
+        "is_nullable": "YES",
+        "column_default": "now()"
+      }
+    ],
+    "sample_rows": [
+      {
+        "pso_id": "31da4db3-1ac5-4c1e-a1a4-ecd113fc446c",
+        "pso_statement": "PSO 1",
+        "program_id": "ce472bb9-b9af-4c29-b248-83a6c9be6cd3",
+        "created_at": "2026-01-31T09:40:54.350905+00:00",
+        "updated_at": "2026-01-31T09:40:54.350905+00:00"
+      },
+      {
+        "pso_id": "909e7c08-6bb6-4f00-8319-8dc2ffe173e4",
+        "pso_statement": "PSO 2",
+        "program_id": "ce472bb9-b9af-4c29-b248-83a6c9be6cd3",
+        "created_at": "2026-01-31T09:40:54.350905+00:00",
+        "updated_at": "2026-01-31T09:40:54.350905+00:00"
+      },
+      {
+        "pso_id": "58d38d8a-8526-40ef-aad5-942a40dbf00b",
+        "pso_statement": "PSO 1",
+        "program_id": "278b4def-4b41-4dd8-9958-ca28ad0cf58d",
+        "created_at": "2026-01-31T09:40:54.350905+00:00",
+        "updated_at": "2026-01-31T09:40:54.350905+00:00"
+      }
+    ]
+  },
+  "allied_department": {
+    "row_count": 1,
+    "columns": [
+      {
+        "column_name": "allied_id",
+        "data_type": "uuid",
+        "is_nullable": "NO",
+        "column_default": "gen_random_uuid()"
+      },
+      {
+        "column_name": "programme_id",
+        "data_type": "uuid",
+        "is_nullable": "NO",
+        "column_default": null
+      },
+      {
+        "column_name": "dept_id",
+        "data_type": "uuid",
+        "is_nullable": "NO",
+        "column_default": null
+      },
+      {
+        "column_name": "created_at",
+        "data_type": "timestamp with time zone",
+        "is_nullable": "YES",
+        "column_default": "now()"
+      },
+      {
+        "column_name": "updated_at",
+        "data_type": "timestamp with time zone",
+        "is_nullable": "YES",
+        "column_default": "now()"
+      }
+    ],
+    "sample_rows": [
+      {
+        "allied_id": "502bf677-9e86-485e-8ab8-559e1bd7b7d5",
+        "programme_id": "ce472bb9-b9af-4c29-b248-83a6c9be6cd3",
+        "dept_id": "8e71566a-03cf-4bb1-ad16-89e0e0d5036a",
+        "created_at": "2026-01-31T09:47:20.802362+00:00",
+        "updated_at": "2026-01-31T09:47:20.802362+00:00"
+      }
+    ]
+  },
+  "course": {
+    "row_count": 18,
+    "columns": [
+      {
+        "column_name": "course_code",
+        "data_type": "character varying",
+        "is_nullable": "NO",
+        "column_default": null
+      },
+      {
+        "column_name": "programme_id",
+        "data_type": "uuid",
+        "is_nullable": "NO",
+        "column_default": null
+      },
+      {
+        "column_name": "course_title",
+        "data_type": "character varying",
+        "is_nullable": "NO",
+        "column_default": null
+      },
+      {
+        "column_name": "semester",
+        "data_type": "integer",
+        "is_nullable": "YES",
+        "column_default": null
+      },
+      {
+        "column_name": "credits",
+        "data_type": "numeric",
+        "is_nullable": "YES",
+        "column_default": null
+      },
+      {
+        "column_name": "teaching_hours",
+        "data_type": "integer",
+        "is_nullable": "YES",
+        "column_default": null
+      },
+      {
+        "column_name": "lab_hours",
+        "data_type": "integer",
+        "is_nullable": "YES",
+        "column_default": null
+      },
+      {
+        "column_name": "self_learning_hours",
+        "data_type": "integer",
+        "is_nullable": "YES",
+        "column_default": null
+      },
+      {
+        "column_name": "tw_hours",
+        "data_type": "integer",
+        "is_nullable": "YES",
+        "column_default": null
+      },
+      {
+        "column_name": "created_at",
+        "data_type": "timestamp with time zone",
+        "is_nullable": "YES",
+        "column_default": "now()"
+      },
+      {
+        "column_name": "updated_at",
+        "data_type": "timestamp with time zone",
+        "is_nullable": "YES",
+        "column_default": "now()"
+      }
+    ],
+    "sample_rows": [
+      {
+        "course_code": "CSC301",
+        "programme_id": "ce472bb9-b9af-4c29-b248-83a6c9be6cd3",
+        "course_title": "Engineering Mathematics-III",
+        "semester": 5,
+        "credits": 4,
+        "teaching_hours": 48,
+        "lab_hours": 24,
+        "self_learning_hours": 10,
+        "tw_hours": 25,
+        "created_at": "2026-01-31T10:06:42.483302+00:00",
+        "updated_at": "2026-01-31T10:06:42.483302+00:00"
+      },
+      {
+        "course_code": "CSC302",
+        "programme_id": "ce472bb9-b9af-4c29-b248-83a6c9be6cd3",
+        "course_title": "Discrete Structures and Graph Theory",
+        "semester": 5,
+        "credits": 4,
+        "teaching_hours": 48,
+        "lab_hours": 24,
+        "self_learning_hours": 10,
+        "tw_hours": 25,
+        "created_at": "2026-01-31T10:06:42.483302+00:00",
+        "updated_at": "2026-01-31T10:06:42.483302+00:00"
+      },
+      {
+        "course_code": "CSC501",
+        "programme_id": "ce472bb9-b9af-4c29-b248-83a6c9be6cd3",
+        "course_title": "Database Management Systems",
+        "semester": 5,
+        "credits": 4,
+        "teaching_hours": 48,
+        "lab_hours": 24,
+        "self_learning_hours": 10,
+        "tw_hours": 25,
+        "created_at": "2026-01-31T10:06:42.483302+00:00",
+        "updated_at": "2026-01-31T10:06:42.483302+00:00"
+      }
+    ]
+  },
+  "course_outcome": {
+    "row_count": 90,
+    "columns": [
+      {
+        "column_name": "co_id",
+        "data_type": "uuid",
+        "is_nullable": "NO",
+        "column_default": "gen_random_uuid()"
+      },
+      {
+        "column_name": "co_statement",
+        "data_type": "text",
+        "is_nullable": "NO",
+        "column_default": null
+      },
+      {
+        "column_name": "course_id",
+        "data_type": "character varying",
+        "is_nullable": "NO",
+        "column_default": null
+      },
+      {
+        "column_name": "created_at",
+        "data_type": "timestamp with time zone",
+        "is_nullable": "YES",
+        "column_default": "now()"
+      },
+      {
+        "column_name": "updated_at",
+        "data_type": "timestamp with time zone",
+        "is_nullable": "YES",
+        "column_default": "now()"
+      }
+    ],
+    "sample_rows": [
+      {
+        "co_id": "e48aad70-e248-4a8e-8fbb-1e8b1d334ae6",
+        "co_statement": "CO1 Engineering Mathematics-III",
+        "course_id": "CSC301",
+        "created_at": "2026-01-31T10:07:44.321455+00:00",
+        "updated_at": "2026-01-31T10:07:44.321455+00:00"
+      },
+      {
+        "co_id": "942a4771-abf4-409d-a12a-41800b179885",
+        "co_statement": "CO2 Engineering Mathematics-III",
+        "course_id": "CSC301",
+        "created_at": "2026-01-31T10:07:44.321455+00:00",
+        "updated_at": "2026-01-31T10:07:44.321455+00:00"
+      },
+      {
+        "co_id": "e5a27320-ff61-45a3-ad75-8960e2404eec",
+        "co_statement": "CO3 Engineering Mathematics-III",
+        "course_id": "CSC301",
+        "created_at": "2026-01-31T10:07:44.321455+00:00",
+        "updated_at": "2026-01-31T10:07:44.321455+00:00"
+      }
+    ]
+  },
+  "student": {
+    "row_count": 1980,
+    "columns": [
+      {
+        "column_name": "student_id",
+        "data_type": "uuid",
+        "is_nullable": "NO",
+        "column_default": "gen_random_uuid()"
+      },
+      {
+        "column_name": "admission_year",
+        "data_type": "integer",
+        "is_nullable": "YES",
+        "column_default": null
+      },
+      {
+        "column_name": "programme_id",
+        "data_type": "uuid",
+        "is_nullable": "NO",
+        "column_default": null
+      },
+      {
+        "column_name": "gender",
+        "data_type": "USER-DEFINED",
+        "is_nullable": "YES",
+        "column_default": null
+      },
+      {
+        "column_name": "category",
+        "data_type": "USER-DEFINED",
+        "is_nullable": "YES",
+        "column_default": null
+      },
+      {
+        "column_name": "minority_flag",
+        "data_type": "boolean",
+        "is_nullable": "YES",
+        "column_default": "false"
+      },
+      {
+        "column_name": "state_of_origin",
+        "data_type": "character varying",
+        "is_nullable": "YES",
+        "column_default": null
+      },
+      {
+        "column_name": "international_flag",
+        "data_type": "boolean",
+        "is_nullable": "YES",
+        "column_default": "false"
+      },
+      {
+        "column_name": "current_status",
+        "data_type": "USER-DEFINED",
+        "is_nullable": "YES",
+        "column_default": "'Active'::student_status_enum"
+      },
+      {
+        "column_name": "created_at",
+        "data_type": "timestamp with time zone",
+        "is_nullable": "YES",
+        "column_default": "now()"
+      },
+      {
+        "column_name": "updated_at",
+        "data_type": "timestamp with time zone",
+        "is_nullable": "YES",
+        "column_default": "now()"
+      }
+    ],
+    "sample_rows": [
+      {
+        "student_id": "1b58fe2f-9f37-4bf7-ab6e-5d3cfc2b9899",
+        "admission_year": 2021,
+        "programme_id": "ce472bb9-b9af-4c29-b248-83a6c9be6cd3",
+        "gender": "Male",
+        "category": "OBC",
+        "minority_flag": false,
+        "state_of_origin": "Maharashtra",
+        "international_flag": false,
+        "current_status": "Active",
+        "created_at": "2026-01-31T10:21:06.757463+00:00",
+        "updated_at": "2026-01-31T10:21:06.757463+00:00"
+      },
+      {
+        "student_id": "6ae8a344-d03c-4eda-9574-d315607609a0",
+        "admission_year": 2021,
+        "programme_id": "ce472bb9-b9af-4c29-b248-83a6c9be6cd3",
+        "gender": "Female",
+        "category": "ST",
+        "minority_flag": false,
+        "state_of_origin": "Maharashtra",
+        "international_flag": false,
+        "current_status": "Active",
+        "created_at": "2026-01-31T10:21:06.757463+00:00",
+        "updated_at": "2026-01-31T10:21:06.757463+00:00"
+      },
+      {
+        "student_id": "09a1a634-f590-4ad9-ba49-1c53d2175a0d",
+        "admission_year": 2021,
+        "programme_id": "ce472bb9-b9af-4c29-b248-83a6c9be6cd3",
+        "gender": "Male",
+        "category": "OBC",
+        "minority_flag": false,
+        "state_of_origin": "Maharashtra",
+        "international_flag": false,
+        "current_status": "Active",
+        "created_at": "2026-01-31T10:21:06.757463+00:00",
+        "updated_at": "2026-01-31T10:21:06.757463+00:00"
+      }
+    ]
+  },
+  "faculty_contribution": {
+    "row_count": 53,
+    "columns": [
+      {
+        "column_name": "contribution_id",
+        "data_type": "uuid",
+        "is_nullable": "NO",
+        "column_default": "gen_random_uuid()"
+      },
+      {
+        "column_name": "contribution_type",
+        "data_type": "USER-DEFINED",
+        "is_nullable": "NO",
+        "column_default": null
+      },
+      {
+        "column_name": "details",
+        "data_type": "text",
+        "is_nullable": "NO",
+        "column_default": null
+      },
+      {
+        "column_name": "year",
+        "data_type": "integer",
+        "is_nullable": "YES",
+        "column_default": null
+      },
+      {
+        "column_name": "faculty_id",
+        "data_type": "uuid",
+        "is_nullable": "NO",
+        "column_default": null
+      },
+      {
+        "column_name": "created_at",
+        "data_type": "timestamp with time zone",
+        "is_nullable": "YES",
+        "column_default": "now()"
+      },
+      {
+        "column_name": "updated_at",
+        "data_type": "timestamp with time zone",
+        "is_nullable": "YES",
+        "column_default": "now()"
+      }
+    ],
+    "sample_rows": [
+      {
+        "contribution_id": "a1b2c3d4-e5f6-4001-8001-111111111111",
+        "contribution_type": "Research",
+        "details": "AI Paper",
+        "year": 2024,
+        "faculty_id": "fc4bbd40-7e12-4c6e-8a9d-123456789001",
+        "created_at": "2026-01-31T10:05:15.022066+00:00",
+        "updated_at": "2026-01-31T10:05:15.022066+00:00"
+      },
+      {
+        "contribution_id": "b2c3d4e5-f6a7-4002-8002-222222222222",
+        "contribution_type": "Research",
+        "details": "AI Paper",
+        "year": 2024,
+        "faculty_id": "250653fc-8a1b-4c2d-9e3f-123456789002",
+        "created_at": "2026-01-31T10:05:15.022066+00:00",
+        "updated_at": "2026-01-31T10:05:15.022066+00:00"
+      },
+      {
+        "contribution_id": "c3d4e5f6-a7b8-4003-8003-333333333333",
+        "contribution_type": "Research",
+        "details": "AI Paper",
+        "year": 2024,
+        "faculty_id": "8aa71cf4-9b2c-5d3e-0f4a-123456789003",
+        "created_at": "2026-01-31T10:05:15.022066+00:00",
+        "updated_at": "2026-01-31T10:05:15.022066+00:00"
+      }
+    ]
+  },
+  "student_course_registration": {
+    "row_count": 3960,
+    "columns": [
+      {
+        "column_name": "registration_id",
+        "data_type": "uuid",
+        "is_nullable": "NO",
+        "column_default": "gen_random_uuid()"
+      },
+      {
+        "column_name": "student_id",
+        "data_type": "uuid",
+        "is_nullable": "NO",
+        "column_default": null
+      },
+      {
+        "column_name": "course_code",
+        "data_type": "character varying",
+        "is_nullable": "NO",
+        "column_default": null
+      },
+      {
+        "column_name": "academic_year",
+        "data_type": "character varying",
+        "is_nullable": "NO",
+        "column_default": null
+      },
+      {
+        "column_name": "created_at",
+        "data_type": "timestamp with time zone",
+        "is_nullable": "YES",
+        "column_default": "now()"
+      },
+      {
+        "column_name": "updated_at",
+        "data_type": "timestamp with time zone",
+        "is_nullable": "YES",
+        "column_default": "now()"
+      }
+    ],
+    "sample_rows": [
+      {
+        "registration_id": "5277897d-712f-4a0f-a14c-df678202d76c",
+        "student_id": "1b58fe2f-9f37-4bf7-ab6e-5d3cfc2b9899",
+        "course_code": "CSC301",
+        "academic_year": "2024-2025",
+        "created_at": "2026-01-31T10:44:21.402173+00:00",
+        "updated_at": "2026-01-31T10:44:21.402173+00:00"
+      },
+      {
+        "registration_id": "4bb19a72-6c51-4def-a50e-7fe3c96b4b7f",
+        "student_id": "1b58fe2f-9f37-4bf7-ab6e-5d3cfc2b9899",
+        "course_code": "CSC302",
+        "academic_year": "2024-2025",
+        "created_at": "2026-01-31T10:44:21.402173+00:00",
+        "updated_at": "2026-01-31T10:44:21.402173+00:00"
+      },
+      {
+        "registration_id": "bcae3197-e054-44e0-9566-e62ef737468a",
+        "student_id": "6ae8a344-d03c-4eda-9574-d315607609a0",
+        "course_code": "CSC301",
+        "academic_year": "2024-2025",
+        "created_at": "2026-01-31T10:44:21.402173+00:00",
+        "updated_at": "2026-01-31T10:44:21.402173+00:00"
+      }
+    ]
+  },
+  "student_performance": {
+    "row_count": 110,
+    "columns": [
+      {
+        "column_name": "performance_id",
+        "data_type": "uuid",
+        "is_nullable": "NO",
+        "column_default": "gen_random_uuid()"
+      },
+      {
+        "column_name": "student_id",
+        "data_type": "uuid",
+        "is_nullable": "NO",
+        "column_default": null
+      },
+      {
+        "column_name": "cgpa",
+        "data_type": "numeric",
+        "is_nullable": "YES",
+        "column_default": null
+      },
+      {
+        "column_name": "backlogs",
+        "data_type": "integer",
+        "is_nullable": "YES",
+        "column_default": null
+      },
+      {
+        "column_name": "graduation_status",
+        "data_type": "boolean",
+        "is_nullable": "YES",
+        "column_default": "false"
+      },
+      {
+        "column_name": "placement_status",
+        "data_type": "boolean",
+        "is_nullable": "YES",
+        "column_default": "false"
+      },
+      {
+        "column_name": "higher_studies",
+        "data_type": "boolean",
+        "is_nullable": "YES",
+        "column_default": "false"
+      },
+      {
+        "column_name": "created_at",
+        "data_type": "timestamp with time zone",
+        "is_nullable": "YES",
+        "column_default": "now()"
+      },
+      {
+        "column_name": "updated_at",
+        "data_type": "timestamp with time zone",
+        "is_nullable": "YES",
+        "column_default": "now()"
+      }
+    ],
+    "sample_rows": [
+      {
+        "performance_id": "066a1000-3bef-4ada-87af-419848797bde",
+        "student_id": "1b58fe2f-9f37-4bf7-ab6e-5d3cfc2b9899",
+        "cgpa": 8.81,
+        "backlogs": 0,
+        "graduation_status": false,
+        "placement_status": true,
+        "higher_studies": false,
+        "created_at": "2026-01-31T11:09:17.310875+00:00",
+        "updated_at": "2026-01-31T11:09:17.310875+00:00"
+      },
+      {
+        "performance_id": "bee52789-c5cd-4f17-b793-563d58342721",
+        "student_id": "6ae8a344-d03c-4eda-9574-d315607609a0",
+        "cgpa": 7.02,
+        "backlogs": 0,
+        "graduation_status": false,
+        "placement_status": true,
+        "higher_studies": false,
+        "created_at": "2026-01-31T11:09:17.310875+00:00",
+        "updated_at": "2026-01-31T11:09:17.310875+00:00"
+      },
+      {
+        "performance_id": "f2e683a8-4800-4078-aab0-1f123472cdc8",
+        "student_id": "09a1a634-f590-4ad9-ba49-1c53d2175a0d",
+        "cgpa": 6.02,
+        "backlogs": 0,
+        "graduation_status": false,
+        "placement_status": true,
+        "higher_studies": false,
+        "created_at": "2026-01-31T11:09:17.310875+00:00",
+        "updated_at": "2026-01-31T11:09:17.310875+00:00"
+      }
+    ]
+  },
+  "co_po_pso_mapping": {
+    "row_count": 90,
+    "columns": [
+      {
+        "column_name": "mapping_id",
+        "data_type": "uuid",
+        "is_nullable": "NO",
+        "column_default": "gen_random_uuid()"
+      },
+      {
+        "column_name": "correlation_level",
+        "data_type": "integer",
+        "is_nullable": "YES",
+        "column_default": null
+      },
+      {
+        "column_name": "co_id",
+        "data_type": "uuid",
+        "is_nullable": "NO",
+        "column_default": null
+      },
+      {
+        "column_name": "po_id",
+        "data_type": "uuid",
+        "is_nullable": "YES",
+        "column_default": null
+      },
+      {
+        "column_name": "pso_id",
+        "data_type": "uuid",
+        "is_nullable": "YES",
+        "column_default": null
+      },
+      {
+        "column_name": "created_at",
+        "data_type": "timestamp with time zone",
+        "is_nullable": "YES",
+        "column_default": "now()"
+      },
+      {
+        "column_name": "updated_at",
+        "data_type": "timestamp with time zone",
+        "is_nullable": "YES",
+        "column_default": "now()"
+      }
+    ],
+    "sample_rows": [
+      {
+        "mapping_id": "5cca27fc-4e17-484b-8c17-c481e4fb0f84",
+        "correlation_level": 3,
+        "co_id": "e48aad70-e248-4a8e-8fbb-1e8b1d334ae6",
+        "po_id": "709a7ec4-2679-4c65-af30-03d9d868b160",
+        "pso_id": null,
+        "created_at": "2026-01-31T10:39:20.276281+00:00",
+        "updated_at": "2026-01-31T10:39:20.276281+00:00"
+      },
+      {
+        "mapping_id": "829a4e68-2eb3-41e3-9ccd-53ce4c965b30",
+        "correlation_level": 3,
+        "co_id": "942a4771-abf4-409d-a12a-41800b179885",
+        "po_id": "709a7ec4-2679-4c65-af30-03d9d868b160",
+        "pso_id": null,
+        "created_at": "2026-01-31T10:39:20.276281+00:00",
+        "updated_at": "2026-01-31T10:39:20.276281+00:00"
+      },
+      {
+        "mapping_id": "afd4680a-7f45-453b-92e6-037d99257d37",
+        "correlation_level": 3,
+        "co_id": "e5a27320-ff61-45a3-ad75-8960e2404eec",
+        "po_id": "709a7ec4-2679-4c65-af30-03d9d868b160",
+        "pso_id": null,
+        "created_at": "2026-01-31T10:39:20.276281+00:00",
+        "updated_at": "2026-01-31T10:39:20.276281+00:00"
+      }
+    ]
+  },
+  "extension_activity": {
+    "row_count": 175,
+    "columns": [
+      {
+        "column_name": "activity_id",
+        "data_type": "uuid",
+        "is_nullable": "NO",
+        "column_default": "gen_random_uuid()"
+      },
+      {
+        "column_name": "student_id",
+        "data_type": "uuid",
+        "is_nullable": "NO",
+        "column_default": null
+      },
+      {
+        "column_name": "activity_type",
+        "data_type": "USER-DEFINED",
+        "is_nullable": "NO",
+        "column_default": null
+      },
+      {
+        "column_name": "hours",
+        "data_type": "integer",
+        "is_nullable": "YES",
+        "column_default": null
+      },
+      {
+        "column_name": "created_at",
+        "data_type": "timestamp with time zone",
+        "is_nullable": "YES",
+        "column_default": "now()"
+      },
+      {
+        "column_name": "updated_at",
+        "data_type": "timestamp with time zone",
+        "is_nullable": "YES",
+        "column_default": "now()"
+      }
+    ],
+    "sample_rows": [
+      {
+        "activity_id": "25cb4db7-60c7-4506-8ba4-5976ac6ae37b",
+        "student_id": "6ae8a344-d03c-4eda-9574-d315607609a0",
+        "activity_type": "CSR",
+        "hours": 40,
+        "created_at": "2026-01-31T10:27:19.883451+00:00",
+        "updated_at": "2026-01-31T10:27:19.883451+00:00"
+      },
+      {
+        "activity_id": "54e01e48-9df3-4f74-b8e1-439aca6120a5",
+        "student_id": "cd224311-5515-4bfc-8a9d-734b705bc4c4",
+        "activity_type": "NCC",
+        "hours": 40,
+        "created_at": "2026-01-31T10:27:19.883451+00:00",
+        "updated_at": "2026-01-31T10:27:19.883451+00:00"
+      },
+      {
+        "activity_id": "36e30607-1076-481f-a041-711f2262dfa9",
+        "student_id": "8fbb95c9-ef41-4f63-9ab9-2eefd0c382a9",
+        "activity_type": "CSR",
+        "hours": 40,
+        "created_at": "2026-01-31T10:27:19.883451+00:00",
+        "updated_at": "2026-01-31T10:27:19.883451+00:00"
+      }
+    ]
+  },
+  "po_pso_attainment": {
+    "row_count": 1,
+    "columns": [
+      {
+        "column_name": "poa_id",
+        "data_type": "uuid",
+        "is_nullable": "NO",
+        "column_default": "gen_random_uuid()"
+      },
+      {
+        "column_name": "po_id",
+        "data_type": "uuid",
+        "is_nullable": "YES",
+        "column_default": null
+      },
+      {
+        "column_name": "pso_id",
+        "data_type": "uuid",
+        "is_nullable": "YES",
+        "column_default": null
+      },
+      {
+        "column_name": "attainment_type",
+        "data_type": "USER-DEFINED",
+        "is_nullable": "NO",
+        "column_default": null
+      },
+      {
+        "column_name": "attainment_value",
+        "data_type": "numeric",
+        "is_nullable": "YES",
+        "column_default": null
+      },
+      {
+        "column_name": "academic_year",
+        "data_type": "character varying",
+        "is_nullable": "NO",
+        "column_default": null
+      },
+      {
+        "column_name": "created_at",
+        "data_type": "timestamp with time zone",
+        "is_nullable": "YES",
+        "column_default": "now()"
+      },
+      {
+        "column_name": "updated_at",
+        "data_type": "timestamp with time zone",
+        "is_nullable": "YES",
+        "column_default": "now()"
+      }
+    ],
+    "sample_rows": [
+      {
+        "poa_id": "adb5a34e-8aea-42c4-a5d9-c54cb3e24a3d",
+        "po_id": "709a7ec4-2679-4c65-af30-03d9d868b160",
+        "pso_id": null,
+        "attainment_type": "Direct",
+        "attainment_value": 2.4,
+        "academic_year": "2024-2025",
+        "created_at": "2026-01-31T10:43:22.735034+00:00",
+        "updated_at": "2026-01-31T10:43:22.735034+00:00"
+      }
+    ]
+  },
+  "soft_skill_program": {
+    "row_count": 1,
+    "columns": [
+      {
+        "column_name": "softskill_id",
+        "data_type": "uuid",
+        "is_nullable": "NO",
+        "column_default": "gen_random_uuid()"
+      },
+      {
+        "column_name": "program_title",
+        "data_type": "character varying",
+        "is_nullable": "NO",
+        "column_default": null
+      },
+      {
+        "column_name": "skill_category",
+        "data_type": "USER-DEFINED",
+        "is_nullable": "NO",
+        "column_default": null
+      },
+      {
+        "column_name": "start_date",
+        "data_type": "date",
+        "is_nullable": "YES",
+        "column_default": null
+      },
+      {
+        "column_name": "end_date",
+        "data_type": "date",
+        "is_nullable": "YES",
+        "column_default": null
+      },
+      {
+        "column_name": "conducted_by",
+        "data_type": "USER-DEFINED",
+        "is_nullable": "YES",
+        "column_default": null
+      },
+      {
+        "column_name": "mode",
+        "data_type": "USER-DEFINED",
+        "is_nullable": "YES",
+        "column_default": null
+      },
+      {
+        "column_name": "placementcell_id",
+        "data_type": "uuid",
+        "is_nullable": "NO",
+        "column_default": null
+      },
+      {
+        "column_name": "created_at",
+        "data_type": "timestamp with time zone",
+        "is_nullable": "YES",
+        "column_default": "now()"
+      },
+      {
+        "column_name": "updated_at",
+        "data_type": "timestamp with time zone",
+        "is_nullable": "YES",
+        "column_default": "now()"
+      }
+    ],
+    "sample_rows": [
+      {
+        "softskill_id": "a6dd993f-c73e-4cb9-ab9f-afb168f36abd",
+        "program_title": "Aptitude",
+        "skill_category": "Aptitude",
+        "start_date": "2024-01-01",
+        "end_date": "2024-05-01",
+        "conducted_by": "Internal",
+        "mode": "Online",
+        "placementcell_id": "9eca1e2b-9cf2-401a-b3c7-edf8b4a7d363",
+        "created_at": "2026-01-31T10:31:23.933192+00:00",
+        "updated_at": "2026-01-31T10:31:23.933192+00:00"
+      }
+    ]
+  },
+  "student_support": {
+    "row_count": 1,
+    "columns": [
+      {
+        "column_name": "support_id",
+        "data_type": "uuid",
+        "is_nullable": "NO",
+        "column_default": "gen_random_uuid()"
+      },
+      {
+        "column_name": "support_type",
+        "data_type": "USER-DEFINED",
+        "is_nullable": "NO",
+        "column_default": null
+      },
+      {
+        "column_name": "beneficiary_count",
+        "data_type": "integer",
+        "is_nullable": "YES",
+        "column_default": null
+      },
+      {
+        "column_name": "year",
+        "data_type": "character varying",
+        "is_nullable": "NO",
+        "column_default": null
+      },
+      {
+        "column_name": "institution_id",
+        "data_type": "uuid",
+        "is_nullable": "NO",
+        "column_default": null
+      },
+      {
+        "column_name": "created_at",
+        "data_type": "timestamp with time zone",
+        "is_nullable": "YES",
+        "column_default": "now()"
+      },
+      {
+        "column_name": "updated_at",
+        "data_type": "timestamp with time zone",
+        "is_nullable": "YES",
+        "column_default": "now()"
+      }
+    ],
+    "sample_rows": [
+      {
+        "support_id": "bebf8cab-d092-41d3-bb21-f887b8a11bfa",
+        "support_type": "Scholarship",
+        "beneficiary_count": 50,
+        "year": "2024",
+        "institution_id": "3f778595-a367-490d-9f02-dfef355ecd1b",
+        "created_at": "2026-01-31T09:16:21.210272+00:00",
+        "updated_at": "2026-01-31T09:16:21.210272+00:00"
+      }
+    ]
+  },
+  "placement_cell": {
+    "row_count": 1,
+    "columns": [
+      {
+        "column_name": "placementcell_id",
+        "data_type": "uuid",
+        "is_nullable": "NO",
+        "column_default": "gen_random_uuid()"
+      },
+      {
+        "column_name": "cell_name",
+        "data_type": "USER-DEFINED",
+        "is_nullable": "NO",
+        "column_default": null
+      },
+      {
+        "column_name": "officer_in_charge",
+        "data_type": "character varying",
+        "is_nullable": "YES",
+        "column_default": null
+      },
+      {
+        "column_name": "contact_email",
+        "data_type": "character varying",
+        "is_nullable": "YES",
+        "column_default": null
+      },
+      {
+        "column_name": "institution_id",
+        "data_type": "uuid",
+        "is_nullable": "NO",
+        "column_default": null
+      },
+      {
+        "column_name": "student_id",
+        "data_type": "uuid",
+        "is_nullable": "YES",
+        "column_default": null
+      },
+      {
+        "column_name": "created_at",
+        "data_type": "timestamp with time zone",
+        "is_nullable": "YES",
+        "column_default": "now()"
+      },
+      {
+        "column_name": "updated_at",
+        "data_type": "timestamp with time zone",
+        "is_nullable": "YES",
+        "column_default": "now()"
+      }
+    ],
+    "sample_rows": [
+      {
+        "placementcell_id": "9eca1e2b-9cf2-401a-b3c7-edf8b4a7d363",
+        "cell_name": "Training & Placement",
+        "officer_in_charge": "Dr. Dashrath Mane",
+        "contact_email": "tpo@ves.ac.in",
+        "institution_id": "3f778595-a367-490d-9f02-dfef355ecd1b",
+        "student_id": null,
+        "created_at": "2026-01-31T09:13:15.675168+00:00",
+        "updated_at": "2026-01-31T09:13:15.675168+00:00"
+      }
+    ]
+  },
+  "competitive_exam": {
+    "row_count": 1,
+    "columns": [
+      {
+        "column_name": "exam_id",
+        "data_type": "uuid",
+        "is_nullable": "NO",
+        "column_default": "gen_random_uuid()"
+      },
+      {
+        "column_name": "exam_name",
+        "data_type": "USER-DEFINED",
+        "is_nullable": "NO",
+        "column_default": null
+      },
+      {
+        "column_name": "exam_category",
+        "data_type": "USER-DEFINED",
+        "is_nullable": "NO",
+        "column_default": null
+      },
+      {
+        "column_name": "registration_no",
+        "data_type": "character varying",
+        "is_nullable": "YES",
+        "column_default": null
+      },
+      {
+        "column_name": "purpose",
+        "data_type": "USER-DEFINED",
+        "is_nullable": "NO",
+        "column_default": null
+      },
+      {
+        "column_name": "created_at",
+        "data_type": "timestamp with time zone",
+        "is_nullable": "YES",
+        "column_default": "now()"
+      },
+      {
+        "column_name": "updated_at",
+        "data_type": "timestamp with time zone",
+        "is_nullable": "YES",
+        "column_default": "now()"
+      }
+    ],
+    "sample_rows": [
+      {
+        "exam_id": "d411c35a-7246-4ac4-b9a1-868cfc0630e3",
+        "exam_name": "GATE",
+        "exam_category": "National",
+        "registration_no": null,
+        "purpose": "Higher Studies",
+        "created_at": "2026-01-31T09:05:36.913241+00:00",
+        "updated_at": "2026-01-31T09:05:36.913241+00:00"
+      }
+    ]
+  },
+  "competitive_exam_appearance": {
+    "row_count": 1,
+    "columns": [
+      {
+        "column_name": "appearance_id",
+        "data_type": "uuid",
+        "is_nullable": "NO",
+        "column_default": "gen_random_uuid()"
+      },
+      {
+        "column_name": "academic_year",
+        "data_type": "character varying",
+        "is_nullable": "NO",
+        "column_default": null
+      },
+      {
+        "column_name": "appeared",
+        "data_type": "USER-DEFINED",
+        "is_nullable": "NO",
+        "column_default": null
+      },
+      {
+        "column_name": "qualified",
+        "data_type": "USER-DEFINED",
+        "is_nullable": "NO",
+        "column_default": null
+      },
+      {
+        "column_name": "rank_or_score",
+        "data_type": "character varying",
+        "is_nullable": "YES",
+        "column_default": null
+      },
+      {
+        "column_name": "student_id",
+        "data_type": "uuid",
+        "is_nullable": "NO",
+        "column_default": null
+      },
+      {
+        "column_name": "exam_id",
+        "data_type": "uuid",
+        "is_nullable": "NO",
+        "column_default": null
+      },
+      {
+        "column_name": "created_at",
+        "data_type": "timestamp with time zone",
+        "is_nullable": "YES",
+        "column_default": "now()"
+      },
+      {
+        "column_name": "updated_at",
+        "data_type": "timestamp with time zone",
+        "is_nullable": "YES",
+        "column_default": "now()"
+      }
+    ],
+    "sample_rows": [
+      {
+        "appearance_id": "43a0ff0b-2800-4a06-8251-831370587855",
+        "academic_year": "2024-2025",
+        "appeared": "Yes",
+        "qualified": "Yes",
+        "rank_or_score": "500",
+        "student_id": "1b58fe2f-9f37-4bf7-ab6e-5d3cfc2b9899",
+        "exam_id": "d411c35a-7246-4ac4-b9a1-868cfc0630e3",
+        "created_at": "2026-01-31T11:00:36.722658+00:00",
+        "updated_at": "2026-01-31T11:00:36.722658+00:00"
+      }
+    ]
+  },
+  "placement": {
+    "row_count": 530,
+    "columns": [
+      {
+        "column_name": "student_id",
+        "data_type": "uuid",
+        "is_nullable": "NO",
+        "column_default": null
+      },
+      {
+        "column_name": "company_name",
+        "data_type": "character varying",
+        "is_nullable": "NO",
+        "column_default": null
+      },
+      {
+        "column_name": "ctc_lpa",
+        "data_type": "numeric",
+        "is_nullable": "YES",
+        "column_default": null
+      },
+      {
+        "column_name": "offer_type",
+        "data_type": "USER-DEFINED",
+        "is_nullable": "YES",
+        "column_default": null
+      },
+      {
+        "column_name": "created_at",
+        "data_type": "timestamp with time zone",
+        "is_nullable": "YES",
+        "column_default": "now()"
+      },
+      {
+        "column_name": "updated_at",
+        "data_type": "timestamp with time zone",
+        "is_nullable": "YES",
+        "column_default": "now()"
+      }
+    ],
+    "sample_rows": [
+      {
+        "student_id": "1b58fe2f-9f37-4bf7-ab6e-5d3cfc2b9899",
+        "company_name": "Nomura",
+        "ctc_lpa": 12.5,
+        "offer_type": "Core",
+        "created_at": "2026-01-31T10:28:19.991341+00:00",
+        "updated_at": "2026-01-31T10:28:19.991341+00:00"
+      },
+      {
+        "student_id": "6ae8a344-d03c-4eda-9574-d315607609a0",
+        "company_name": "Barclays",
+        "ctc_lpa": 14,
+        "offer_type": "Core",
+        "created_at": "2026-01-31T10:28:19.991341+00:00",
+        "updated_at": "2026-01-31T10:28:19.991341+00:00"
+      },
+      {
+        "student_id": "09a1a634-f590-4ad9-ba49-1c53d2175a0d",
+        "company_name": "Capgemini",
+        "ctc_lpa": 4.25,
+        "offer_type": "Non-core",
+        "created_at": "2026-01-31T10:28:19.991341+00:00",
+        "updated_at": "2026-01-31T10:28:19.991341+00:00"
+      }
+    ]
+  },
+  "faculty": {
+    "row_count": 53,
+    "columns": [
+      {
+        "column_name": "faculty_id",
+        "data_type": "uuid",
+        "is_nullable": "NO",
+        "column_default": "gen_random_uuid()"
+      },
+      {
+        "column_name": "faculty_name",
+        "data_type": "character varying",
+        "is_nullable": "NO",
+        "column_default": null
+      },
+      {
+        "column_name": "designation",
+        "data_type": "character varying",
+        "is_nullable": "YES",
+        "column_default": null
+      },
+      {
+        "column_name": "qualification",
+        "data_type": "character varying",
+        "is_nullable": "YES",
+        "column_default": null
+      },
+      {
+        "column_name": "experience",
+        "data_type": "integer",
+        "is_nullable": "YES",
+        "column_default": null
+      },
+      {
+        "column_name": "faculty_type",
+        "data_type": "USER-DEFINED",
+        "is_nullable": "YES",
+        "column_default": "'Regular'::faculty_type_enum"
+      },
+      {
+        "column_name": "aicte_compliance",
+        "data_type": "boolean",
+        "is_nullable": "YES",
+        "column_default": "true"
+      },
+      {
+        "column_name": "dept_id",
+        "data_type": "uuid",
+        "is_nullable": "NO",
+        "column_default": null
+      },
+      {
+        "column_name": "created_at",
+        "data_type": "timestamp with time zone",
+        "is_nullable": "YES",
+        "column_default": "now()"
+      },
+      {
+        "column_name": "updated_at",
+        "data_type": "timestamp with time zone",
+        "is_nullable": "YES",
+        "column_default": "now()"
+      }
+    ],
+    "sample_rows": [
+      {
+        "faculty_id": "fc4bbd40-7e12-4c6e-8a9d-123456789001",
+        "faculty_name": "Dr. Nupur Giri",
+        "designation": "Professor",
+        "qualification": "PhD",
+        "experience": 28,
+        "faculty_type": "Regular",
+        "aicte_compliance": true,
+        "dept_id": "8e71566a-03cf-4bb1-ad16-89e0e0d5036a",
+        "created_at": "2026-01-31T09:37:32.368648+00:00",
+        "updated_at": "2026-01-31T09:37:32.368648+00:00"
+      },
+      {
+        "faculty_id": "250653fc-8a1b-4c2d-9e3f-123456789002",
+        "faculty_name": "Dr. Gresha Bhatia",
+        "designation": "Associate Professor",
+        "qualification": "PhD",
+        "experience": 22,
+        "faculty_type": "Regular",
+        "aicte_compliance": true,
+        "dept_id": "8e71566a-03cf-4bb1-ad16-89e0e0d5036a",
+        "created_at": "2026-01-31T09:37:32.368648+00:00",
+        "updated_at": "2026-01-31T09:37:32.368648+00:00"
+      },
+      {
+        "faculty_id": "8aa71cf4-9b2c-5d3e-0f4a-123456789003",
+        "faculty_name": "Dr. Sharmila Sengupta",
+        "designation": "Associate Professor",
+        "qualification": "PhD",
+        "experience": 24,
+        "faculty_type": "Regular",
+        "aicte_compliance": true,
+        "dept_id": "8e71566a-03cf-4bb1-ad16-89e0e0d5036a",
+        "created_at": "2026-01-31T09:37:32.368648+00:00",
+        "updated_at": "2026-01-31T09:37:32.368648+00:00"
+      }
+    ]
+  },
+  "admission_statistics": {
+    "row_count": 5,
+    "columns": [
+      {
+        "column_name": "admission_id",
+        "data_type": "uuid",
+        "is_nullable": "NO",
+        "column_default": "gen_random_uuid()"
+      },
+      {
+        "column_name": "academic_year",
+        "data_type": "character varying",
+        "is_nullable": "NO",
+        "column_default": null
+      },
+      {
+        "column_name": "sanctioned_intake",
+        "data_type": "integer",
+        "is_nullable": "YES",
+        "column_default": null
+      },
+      {
+        "column_name": "actual_admissions",
+        "data_type": "integer",
+        "is_nullable": "YES",
+        "column_default": null
+      },
+      {
+        "column_name": "lateral_entries",
+        "data_type": "integer",
+        "is_nullable": "YES",
+        "column_default": null
+      },
+      {
+        "column_name": "supernumerary",
+        "data_type": "integer",
+        "is_nullable": "YES",
+        "column_default": null
+      },
+      {
+        "column_name": "program_id",
+        "data_type": "uuid",
+        "is_nullable": "NO",
+        "column_default": null
+      },
+      {
+        "column_name": "created_at",
+        "data_type": "timestamp with time zone",
+        "is_nullable": "YES",
+        "column_default": "now()"
+      },
+      {
+        "column_name": "updated_at",
+        "data_type": "timestamp with time zone",
+        "is_nullable": "YES",
+        "column_default": "now()"
+      }
+    ],
+    "sample_rows": [
+      {
+        "admission_id": "84c31668-a358-46b4-9202-7b921aef09c8",
+        "academic_year": "2024-2025",
+        "sanctioned_intake": 180,
+        "actual_admissions": 180,
+        "lateral_entries": 5,
+        "supernumerary": 2,
+        "program_id": "ce472bb9-b9af-4c29-b248-83a6c9be6cd3",
+        "created_at": "2026-01-31T09:43:50.345617+00:00",
+        "updated_at": "2026-01-31T09:43:50.345617+00:00"
+      },
+      {
+        "admission_id": "ac290819-3134-465c-b9aa-1bf215ad4750",
+        "academic_year": "2024-2025",
+        "sanctioned_intake": 180,
+        "actual_admissions": 180,
+        "lateral_entries": 5,
+        "supernumerary": 2,
+        "program_id": "278b4def-4b41-4dd8-9958-ca28ad0cf58d",
+        "created_at": "2026-01-31T09:43:50.345617+00:00",
+        "updated_at": "2026-01-31T09:43:50.345617+00:00"
+      },
+      {
+        "admission_id": "51f1137c-bfb8-4997-a66f-330b7bc46c69",
+        "academic_year": "2024-2025",
+        "sanctioned_intake": 120,
+        "actual_admissions": 120,
+        "lateral_entries": 5,
+        "supernumerary": 2,
+        "program_id": "a742b501-9439-4ded-b129-ef95f65efec6",
+        "created_at": "2026-01-31T09:43:50.345617+00:00",
+        "updated_at": "2026-01-31T09:43:50.345617+00:00"
+      }
+    ]
+  },
+  "assessment_tool": {
+    "row_count": 18,
+    "columns": [
+      {
+        "column_name": "assessment_id",
+        "data_type": "uuid",
+        "is_nullable": "NO",
+        "column_default": "gen_random_uuid()"
+      },
+      {
+        "column_name": "tool_type",
+        "data_type": "USER-DEFINED",
+        "is_nullable": "NO",
+        "column_default": null
+      },
+      {
+        "column_name": "rubric_used",
+        "data_type": "text",
+        "is_nullable": "NO",
+        "column_default": null
+      },
+      {
+        "column_name": "course_id",
+        "data_type": "character varying",
+        "is_nullable": "NO",
+        "column_default": null
+      },
+      {
+        "column_name": "created_at",
+        "data_type": "timestamp with time zone",
+        "is_nullable": "YES",
+        "column_default": "now()"
+      },
+      {
+        "column_name": "updated_at",
+        "data_type": "timestamp with time zone",
+        "is_nullable": "YES",
+        "column_default": "now()"
+      }
+    ],
+    "sample_rows": [
+      {
+        "assessment_id": "ab5b74c1-70c7-4660-89b8-90daae609d10",
+        "tool_type": "CIE",
+        "rubric_used": "Standard",
+        "course_id": "CSC301",
+        "created_at": "2026-01-31T10:08:59.373633+00:00",
+        "updated_at": "2026-01-31T10:08:59.373633+00:00"
+      },
+      {
+        "assessment_id": "065bc919-d080-4ca9-96a0-af6f593c5b1f",
+        "tool_type": "CIE",
+        "rubric_used": "Standard",
+        "course_id": "CSC302",
+        "created_at": "2026-01-31T10:08:59.373633+00:00",
+        "updated_at": "2026-01-31T10:08:59.373633+00:00"
+      },
+      {
+        "assessment_id": "6a9ff288-00c8-4df9-914a-103e7f4a29e0",
+        "tool_type": "CIE",
+        "rubric_used": "Standard",
+        "course_id": "CSC501",
+        "created_at": "2026-01-31T10:08:59.373633+00:00",
+        "updated_at": "2026-01-31T10:08:59.373633+00:00"
+      }
+    ]
+  },
+  "internship": {
+    "row_count": 1,
+    "columns": [
+      {
+        "column_name": "internship_id",
+        "data_type": "uuid",
+        "is_nullable": "NO",
+        "column_default": "gen_random_uuid()"
+      },
+      {
+        "column_name": "organization_name",
+        "data_type": "character varying",
+        "is_nullable": "NO",
+        "column_default": null
+      },
+      {
+        "column_name": "duration",
+        "data_type": "integer",
+        "is_nullable": "YES",
+        "column_default": null
+      },
+      {
+        "column_name": "sdg_mapped",
+        "data_type": "character varying",
+        "is_nullable": "YES",
+        "column_default": null
+      },
+      {
+        "column_name": "student_id",
+        "data_type": "uuid",
+        "is_nullable": "NO",
+        "column_default": null
+      },
+      {
+        "column_name": "created_at",
+        "data_type": "timestamp with time zone",
+        "is_nullable": "YES",
+        "column_default": "now()"
+      },
+      {
+        "column_name": "updated_at",
+        "data_type": "timestamp with time zone",
+        "is_nullable": "YES",
+        "column_default": "now()"
+      }
+    ],
+    "sample_rows": [
+      {
+        "internship_id": "6101dbd6-1a3d-420f-bb06-fef650b898cc",
+        "organization_name": "TCS",
+        "duration": 2,
+        "sdg_mapped": "Goal9",
+        "student_id": "1b58fe2f-9f37-4bf7-ab6e-5d3cfc2b9899",
+        "created_at": "2026-01-31T10:22:10.760636+00:00",
+        "updated_at": "2026-01-31T10:22:10.760636+00:00"
+      }
+    ]
+  },
+  "governance_activity": {
+    "row_count": 1,
+    "columns": [
+      {
+        "column_name": "activity_id",
+        "data_type": "uuid",
+        "is_nullable": "NO",
+        "column_default": "gen_random_uuid()"
+      },
+      {
+        "column_name": "type",
+        "data_type": "USER-DEFINED",
+        "is_nullable": "NO",
+        "column_default": null
+      },
+      {
+        "column_name": "decisions",
+        "data_type": "text",
+        "is_nullable": "NO",
+        "column_default": null
+      },
+      {
+        "column_name": "implementation_status",
+        "data_type": "boolean",
+        "is_nullable": "YES",
+        "column_default": "false"
+      },
+      {
+        "column_name": "institution_id",
+        "data_type": "uuid",
+        "is_nullable": "NO",
+        "column_default": null
+      },
+      {
+        "column_name": "created_at",
+        "data_type": "timestamp with time zone",
+        "is_nullable": "YES",
+        "column_default": "now()"
+      },
+      {
+        "column_name": "updated_at",
+        "data_type": "timestamp with time zone",
+        "is_nullable": "YES",
+        "column_default": "now()"
+      }
+    ],
+    "sample_rows": [
+      {
+        "activity_id": "295818b6-bb3e-42e8-aa7e-487b5d1d1402",
+        "type": "IQAC",
+        "decisions": "Audit",
+        "implementation_status": true,
+        "institution_id": "3f778595-a367-490d-9f02-dfef355ecd1b",
+        "created_at": "2026-01-31T09:19:00.820807+00:00",
+        "updated_at": "2026-01-31T09:19:00.820807+00:00"
+      }
+    ]
+  },
+  "placement_event": {
+    "row_count": 8,
+    "columns": [
+      {
+        "column_name": "event_id",
+        "data_type": "uuid",
+        "is_nullable": "NO",
+        "column_default": "gen_random_uuid()"
+      },
+      {
+        "column_name": "event_type",
+        "data_type": "USER-DEFINED",
+        "is_nullable": "NO",
+        "column_default": null
+      },
+      {
+        "column_name": "company_name",
+        "data_type": "character varying",
+        "is_nullable": "YES",
+        "column_default": null
+      },
+      {
+        "column_name": "event_date",
+        "data_type": "date",
+        "is_nullable": "NO",
+        "column_default": null
+      },
+      {
+        "column_name": "mode",
+        "data_type": "USER-DEFINED",
+        "is_nullable": "NO",
+        "column_default": null
+      },
+      {
+        "column_name": "job_role",
+        "data_type": "character varying",
+        "is_nullable": "YES",
+        "column_default": null
+      },
+      {
+        "column_name": "ctc_range",
+        "data_type": "character varying",
+        "is_nullable": "YES",
+        "column_default": null
+      },
+      {
+        "column_name": "placementcell_id",
+        "data_type": "uuid",
+        "is_nullable": "NO",
+        "column_default": null
+      },
+      {
+        "column_name": "created_at",
+        "data_type": "timestamp with time zone",
+        "is_nullable": "YES",
+        "column_default": "now()"
+      },
+      {
+        "column_name": "updated_at",
+        "data_type": "timestamp with time zone",
+        "is_nullable": "YES",
+        "column_default": "now()"
+      }
+    ],
+    "sample_rows": [
+      {
+        "event_id": "a21b4b44-3a3c-484a-8457-f60b5cd22ef5",
+        "event_type": "Placement Drive",
+        "company_name": "Morgan Stanley",
+        "event_date": "2024-10-15",
+        "mode": "Hybrid",
+        "job_role": "Analyst",
+        "ctc_range": "29.5 LPA",
+        "placementcell_id": "9eca1e2b-9cf2-401a-b3c7-edf8b4a7d363",
+        "created_at": "2026-01-31T10:36:46.551638+00:00",
+        "updated_at": "2026-01-31T10:36:46.551638+00:00"
+      },
+      {
+        "event_id": "45df0f56-9737-419a-b235-82edf830a2e7",
+        "event_type": "Placement Drive",
+        "company_name": "J.P. Morgan Chase",
+        "event_date": "2024-10-15",
+        "mode": "Hybrid",
+        "job_role": "Analyst",
+        "ctc_range": "19.0 LPA",
+        "placementcell_id": "9eca1e2b-9cf2-401a-b3c7-edf8b4a7d363",
+        "created_at": "2026-01-31T10:36:46.551638+00:00",
+        "updated_at": "2026-01-31T10:36:46.551638+00:00"
+      },
+      {
+        "event_id": "d0497af0-48a6-4f2e-9ea3-da0fec4f5213",
+        "event_type": "Placement Drive",
+        "company_name": "Nomura",
+        "event_date": "2024-10-15",
+        "mode": "Hybrid",
+        "job_role": "Analyst",
+        "ctc_range": "12.5 LPA",
+        "placementcell_id": "9eca1e2b-9cf2-401a-b3c7-edf8b4a7d363",
+        "created_at": "2026-01-31T10:36:46.551638+00:00",
+        "updated_at": "2026-01-31T10:36:46.551638+00:00"
+      }
+    ]
+  },
+  "institution": {
+    "row_count": 1,
+    "columns": [
+      {
+        "column_name": "institution_id",
+        "data_type": "uuid",
+        "is_nullable": "NO",
+        "column_default": "gen_random_uuid()"
+      },
+      {
+        "column_name": "institution_name",
+        "data_type": "character varying",
+        "is_nullable": "NO",
+        "column_default": null
+      },
+      {
+        "column_name": "institution_type",
+        "data_type": "USER-DEFINED",
+        "is_nullable": "NO",
+        "column_default": null
+      },
+      {
+        "column_name": "ownership_type",
+        "data_type": "USER-DEFINED",
+        "is_nullable": "NO",
+        "column_default": null
+      },
+      {
+        "column_name": "year_established",
+        "data_type": "integer",
+        "is_nullable": "YES",
+        "column_default": null
+      },
+      {
+        "column_name": "ugc_autonomous",
+        "data_type": "boolean",
+        "is_nullable": "YES",
+        "column_default": "false"
+      },
+      {
+        "column_name": "institution_website",
+        "data_type": "character varying",
+        "is_nullable": "YES",
+        "column_default": null
+      },
+      {
+        "column_name": "created_at",
+        "data_type": "timestamp with time zone",
+        "is_nullable": "YES",
+        "column_default": "now()"
+      },
+      {
+        "column_name": "updated_at",
+        "data_type": "timestamp with time zone",
+        "is_nullable": "YES",
+        "column_default": "now()"
+      }
+    ],
+    "sample_rows": [
+      {
+        "institution_id": "3f778595-a367-490d-9f02-dfef355ecd1b",
+        "institution_name": "Vivekanand Education Society's Institute of Technology",
+        "institution_type": "Autonomous College",
+        "ownership_type": "Trust",
+        "year_established": 1984,
+        "ugc_autonomous": true,
+        "institution_website": "https://vesit.ves.ac.in/",
+        "created_at": "2026-01-31T08:56:10.988416+00:00",
+        "updated_at": "2026-01-31T08:56:10.988416+00:00"
+      }
+    ]
+  },
+  "faculty_course_allocation": {
+    "row_count": 18,
+    "columns": [
+      {
+        "column_name": "faculty_id",
+        "data_type": "uuid",
+        "is_nullable": "NO",
+        "column_default": null
+      },
+      {
+        "column_name": "course_code",
+        "data_type": "character varying",
+        "is_nullable": "NO",
+        "column_default": null
+      },
+      {
+        "column_name": "academic_year",
+        "data_type": "character varying",
+        "is_nullable": "NO",
+        "column_default": null
+      },
+      {
+        "column_name": "created_at",
+        "data_type": "timestamp with time zone",
+        "is_nullable": "YES",
+        "column_default": "now()"
+      },
+      {
+        "column_name": "updated_at",
+        "data_type": "timestamp with time zone",
+        "is_nullable": "YES",
+        "column_default": "now()"
+      }
+    ],
+    "sample_rows": [
+      {
+        "faculty_id": "250653fc-8a1b-4c2d-9e3f-123456789002",
+        "course_code": "CSC301",
+        "academic_year": "2024-2025",
+        "created_at": "2026-01-31T10:10:58.939398+00:00",
+        "updated_at": "2026-01-31T10:10:58.939398+00:00"
+      },
+      {
+        "faculty_id": "db774180-1d4e-7f5a-2b6c-123456789005",
+        "course_code": "CSC302",
+        "academic_year": "2024-2025",
+        "created_at": "2026-01-31T10:10:58.939398+00:00",
+        "updated_at": "2026-01-31T10:10:58.939398+00:00"
+      },
+      {
+        "faculty_id": "fc4bbd40-7e12-4c6e-8a9d-123456789001",
+        "course_code": "CSC501",
+        "academic_year": "2024-2025",
+        "created_at": "2026-01-31T10:10:58.939398+00:00",
+        "updated_at": "2026-01-31T10:10:58.939398+00:00"
+      }
+    ]
+  },
+  "curriculum_component": {
+    "row_count": 1,
+    "columns": [
+      {
+        "column_name": "component_id",
+        "data_type": "uuid",
+        "is_nullable": "NO",
+        "column_default": "gen_random_uuid()"
+      },
+      {
+        "column_name": "component_name",
+        "data_type": "USER-DEFINED",
+        "is_nullable": "NO",
+        "column_default": null
+      },
+      {
+        "column_name": "credit_percentage",
+        "data_type": "numeric",
+        "is_nullable": "YES",
+        "column_default": null
+      },
+      {
+        "column_name": "program_id",
+        "data_type": "uuid",
+        "is_nullable": "NO",
+        "column_default": null
+      },
+      {
+        "column_name": "created_at",
+        "data_type": "timestamp with time zone",
+        "is_nullable": "YES",
+        "column_default": "now()"
+      },
+      {
+        "column_name": "updated_at",
+        "data_type": "timestamp with time zone",
+        "is_nullable": "YES",
+        "column_default": "now()"
+      }
+    ],
+    "sample_rows": [
+      {
+        "component_id": "fd6feb95-211e-4550-8b0c-b301b8859ed6",
+        "component_name": "Core",
+        "credit_percentage": 60,
+        "program_id": "ce472bb9-b9af-4c29-b248-83a6c9be6cd3",
+        "created_at": "2026-01-31T09:42:08.096423+00:00",
+        "updated_at": "2026-01-31T09:42:08.096423+00:00"
+      }
+    ]
+  },
+  "higher_studies": {
+    "row_count": 37,
+    "columns": [
+      {
+        "column_name": "student_id",
+        "data_type": "uuid",
+        "is_nullable": "NO",
+        "column_default": null
+      },
+      {
+        "column_name": "exam_qualified",
+        "data_type": "USER-DEFINED",
+        "is_nullable": "NO",
+        "column_default": null
+      },
+      {
+        "column_name": "institution_name",
+        "data_type": "character varying",
+        "is_nullable": "NO",
+        "column_default": null
+      },
+      {
+        "column_name": "created_at",
+        "data_type": "timestamp with time zone",
+        "is_nullable": "YES",
+        "column_default": "now()"
+      },
+      {
+        "column_name": "updated_at",
+        "data_type": "timestamp with time zone",
+        "is_nullable": "YES",
+        "column_default": "now()"
+      }
+    ],
+    "sample_rows": [
+      {
+        "student_id": "91184aa0-ff20-444e-829d-eda4f2162c78",
+        "exam_qualified": "GATE",
+        "institution_name": "IIT Bombay",
+        "created_at": "2026-01-31T10:27:51.586806+00:00",
+        "updated_at": "2026-01-31T10:27:51.586806+00:00"
+      },
+      {
+        "student_id": "c1760cb8-0dc1-48a2-9a73-613c35e1302a",
+        "exam_qualified": "GATE",
+        "institution_name": "IIT Bombay",
+        "created_at": "2026-01-31T10:27:51.586806+00:00",
+        "updated_at": "2026-01-31T10:27:51.586806+00:00"
+      },
+      {
+        "student_id": "06d359c6-c299-4bf9-b04f-6e5f53b53e32",
+        "exam_qualified": "GATE",
+        "institution_name": "IIT Bombay",
+        "created_at": "2026-01-31T10:27:51.586806+00:00",
+        "updated_at": "2026-01-31T10:27:51.586806+00:00"
+      }
+    ]
+  },
+  "student_course_result": {
+    "row_count": 3960,
+    "columns": [
+      {
+        "column_name": "result_id",
+        "data_type": "uuid",
+        "is_nullable": "NO",
+        "column_default": "gen_random_uuid()"
+      },
+      {
+        "column_name": "student_id",
+        "data_type": "uuid",
+        "is_nullable": "NO",
+        "column_default": null
+      },
+      {
+        "column_name": "course_code",
+        "data_type": "character varying",
+        "is_nullable": "NO",
+        "column_default": null
+      },
+      {
+        "column_name": "internal_marks",
+        "data_type": "numeric",
+        "is_nullable": "YES",
+        "column_default": null
+      },
+      {
+        "column_name": "end_sem_marks",
+        "data_type": "numeric",
+        "is_nullable": "YES",
+        "column_default": null
+      },
+      {
+        "column_name": "grade",
+        "data_type": "character varying",
+        "is_nullable": "YES",
+        "column_default": null
+      },
+      {
+        "column_name": "pass_flag",
+        "data_type": "boolean",
+        "is_nullable": "YES",
+        "column_default": "false"
+      },
+      {
+        "column_name": "created_at",
+        "data_type": "timestamp with time zone",
+        "is_nullable": "YES",
+        "column_default": "now()"
+      },
+      {
+        "column_name": "updated_at",
+        "data_type": "timestamp with time zone",
+        "is_nullable": "YES",
+        "column_default": "now()"
+      }
+    ],
+    "sample_rows": [
+      {
+        "result_id": "6f8d19b0-d304-49c4-ab74-a8c61948269b",
+        "student_id": "1b58fe2f-9f37-4bf7-ab6e-5d3cfc2b9899",
+        "course_code": "CSC301",
+        "internal_marks": 18,
+        "end_sem_marks": 70,
+        "grade": "A",
+        "pass_flag": true,
+        "created_at": "2026-01-31T10:44:43.767822+00:00",
+        "updated_at": "2026-01-31T10:44:43.767822+00:00"
+      },
+      {
+        "result_id": "a9b93b4d-835b-47b8-b2c0-603f65b280cb",
+        "student_id": "1b58fe2f-9f37-4bf7-ab6e-5d3cfc2b9899",
+        "course_code": "CSC302",
+        "internal_marks": 18,
+        "end_sem_marks": 70,
+        "grade": "A",
+        "pass_flag": true,
+        "created_at": "2026-01-31T10:44:43.767822+00:00",
+        "updated_at": "2026-01-31T10:44:43.767822+00:00"
+      },
+      {
+        "result_id": "2a2cab30-c9b9-46a0-9795-6fcde80808d6",
+        "student_id": "6ae8a344-d03c-4eda-9574-d315607609a0",
+        "course_code": "CSC301",
+        "internal_marks": 18,
+        "end_sem_marks": 70,
+        "grade": "A",
+        "pass_flag": true,
+        "created_at": "2026-01-31T10:44:43.767822+00:00",
+        "updated_at": "2026-01-31T10:44:43.767822+00:00"
+      }
+    ]
+  },
+  "placement_participation": {
+    "row_count": 530,
+    "columns": [
+      {
+        "column_name": "participation_id",
+        "data_type": "uuid",
+        "is_nullable": "NO",
+        "column_default": "gen_random_uuid()"
+      },
+      {
+        "column_name": "student_id",
+        "data_type": "uuid",
+        "is_nullable": "NO",
+        "column_default": null
+      },
+      {
+        "column_name": "event_id",
+        "data_type": "uuid",
+        "is_nullable": "NO",
+        "column_default": null
+      },
+      {
+        "column_name": "appeared_status",
+        "data_type": "USER-DEFINED",
+        "is_nullable": "NO",
+        "column_default": null
+      },
+      {
+        "column_name": "selected_status",
+        "data_type": "USER-DEFINED",
+        "is_nullable": "NO",
+        "column_default": null
+      },
+      {
+        "column_name": "offer_type",
+        "data_type": "USER-DEFINED",
+        "is_nullable": "NO",
+        "column_default": null
+      },
+      {
+        "column_name": "created_at",
+        "data_type": "timestamp with time zone",
+        "is_nullable": "YES",
+        "column_default": "now()"
+      },
+      {
+        "column_name": "updated_at",
+        "data_type": "timestamp with time zone",
+        "is_nullable": "YES",
+        "column_default": "now()"
+      }
+    ],
+    "sample_rows": [
+      {
+        "participation_id": "62f9766b-31a8-4623-949b-a57f7626ea40",
+        "student_id": "1b58fe2f-9f37-4bf7-ab6e-5d3cfc2b9899",
+        "event_id": "d0497af0-48a6-4f2e-9ea3-da0fec4f5213",
+        "appeared_status": "Yes",
+        "selected_status": "Yes",
+        "offer_type": "Non-core",
+        "created_at": "2026-01-31T10:55:36.94857+00:00",
+        "updated_at": "2026-01-31T10:55:36.94857+00:00"
+      },
+      {
+        "participation_id": "bc1cd206-17b9-481a-954e-cfea17a4cb40",
+        "student_id": "6ae8a344-d03c-4eda-9574-d315607609a0",
+        "event_id": "e500be1f-e6fa-4e64-bec1-03ee786f0a79",
+        "appeared_status": "Yes",
+        "selected_status": "Yes",
+        "offer_type": "Core",
+        "created_at": "2026-01-31T10:55:36.94857+00:00",
+        "updated_at": "2026-01-31T10:55:36.94857+00:00"
+      },
+      {
+        "participation_id": "ba00bdaf-bc59-4884-90ff-637fafef8df2",
+        "student_id": "09a1a634-f590-4ad9-ba49-1c53d2175a0d",
+        "event_id": "668bfc21-0c73-4325-b1e2-7b4e47b132c8",
+        "appeared_status": "Yes",
+        "selected_status": "Yes",
+        "offer_type": "Non-core",
+        "created_at": "2026-01-31T10:55:36.94857+00:00",
+        "updated_at": "2026-01-31T10:55:36.94857+00:00"
+      }
+    ]
+  },
+  "co_attainment": {
+    "row_count": 1,
+    "columns": [
+      {
+        "column_name": "coa_id",
+        "data_type": "uuid",
+        "is_nullable": "NO",
+        "column_default": "gen_random_uuid()"
+      },
+      {
+        "column_name": "co_id",
+        "data_type": "uuid",
+        "is_nullable": "NO",
+        "column_default": null
+      },
+      {
+        "column_name": "academic_year",
+        "data_type": "character varying",
+        "is_nullable": "NO",
+        "column_default": null
+      },
+      {
+        "column_name": "attainment_value",
+        "data_type": "numeric",
+        "is_nullable": "YES",
+        "column_default": null
+      },
+      {
+        "column_name": "target_value",
+        "data_type": "numeric",
+        "is_nullable": "YES",
+        "column_default": null
+      },
+      {
+        "column_name": "created_at",
+        "data_type": "timestamp with time zone",
+        "is_nullable": "YES",
+        "column_default": "now()"
+      },
+      {
+        "column_name": "updated_at",
+        "data_type": "timestamp with time zone",
+        "is_nullable": "YES",
+        "column_default": "now()"
+      }
+    ],
+    "sample_rows": [
+      {
+        "coa_id": "d6d9bc1b-5294-47e4-8f81-1d4075963112",
+        "co_id": "e48aad70-e248-4a8e-8fbb-1e8b1d334ae6",
+        "academic_year": "2024-2025",
+        "attainment_value": 2.6,
+        "target_value": 2.5,
+        "created_at": "2026-01-31T10:41:52.920062+00:00",
+        "updated_at": "2026-01-31T10:41:52.920062+00:00"
+      }
+    ]
+  },
+  "project": {
+    "row_count": 1,
+    "columns": [
+      {
+        "column_name": "project_id",
+        "data_type": "uuid",
+        "is_nullable": "NO",
+        "column_default": "gen_random_uuid()"
+      },
+      {
+        "column_name": "title",
+        "data_type": "character varying",
+        "is_nullable": "NO",
+        "column_default": null
+      },
+      {
+        "column_name": "type",
+        "data_type": "USER-DEFINED",
+        "is_nullable": "NO",
+        "column_default": null
+      },
+      {
+        "column_name": "sustainability_flag",
+        "data_type": "boolean",
+        "is_nullable": "YES",
+        "column_default": "false"
+      },
+      {
+        "column_name": "industry_linked",
+        "data_type": "boolean",
+        "is_nullable": "YES",
+        "column_default": "false"
+      },
+      {
+        "column_name": "program_id",
+        "data_type": "uuid",
+        "is_nullable": "NO",
+        "column_default": null
+      },
+      {
+        "column_name": "created_at",
+        "data_type": "timestamp with time zone",
+        "is_nullable": "YES",
+        "column_default": "now()"
+      },
+      {
+        "column_name": "updated_at",
+        "data_type": "timestamp with time zone",
+        "is_nullable": "YES",
+        "column_default": "now()"
+      }
+    ],
+    "sample_rows": [
+      {
+        "project_id": "7f52f622-b8ec-410b-b75e-0979e3c03ce8",
+        "title": "Project X",
+        "type": "Capstone",
+        "sustainability_flag": true,
+        "industry_linked": true,
+        "program_id": "ce472bb9-b9af-4c29-b248-83a6c9be6cd3",
+        "created_at": "2026-01-31T09:48:51.003228+00:00",
+        "updated_at": "2026-01-31T09:48:51.003228+00:00"
+      }
+    ]
+  },
+  "feedback": {
+    "row_count": 1,
+    "columns": [
+      {
+        "column_name": "feedback_id",
+        "data_type": "uuid",
+        "is_nullable": "NO",
+        "column_default": "gen_random_uuid()"
+      },
+      {
+        "column_name": "source",
+        "data_type": "USER-DEFINED",
+        "is_nullable": "NO",
+        "column_default": null
+      },
+      {
+        "column_name": "analysis",
+        "data_type": "text",
+        "is_nullable": "NO",
+        "column_default": null
+      },
+      {
+        "column_name": "action_taken",
+        "data_type": "text",
+        "is_nullable": "YES",
+        "column_default": null
+      },
+      {
+        "column_name": "program_id",
+        "data_type": "uuid",
+        "is_nullable": "NO",
+        "column_default": null
+      },
+      {
+        "column_name": "created_at",
+        "data_type": "timestamp with time zone",
+        "is_nullable": "YES",
+        "column_default": "now()"
+      },
+      {
+        "column_name": "updated_at",
+        "data_type": "timestamp with time zone",
+        "is_nullable": "YES",
+        "column_default": "now()"
+      }
+    ],
+    "sample_rows": [
+      {
+        "feedback_id": "2991d35a-8197-42c1-b48c-b313fd4e8288",
+        "source": "Alumni",
+        "analysis": "Good",
+        "action_taken": "None",
+        "program_id": "ce472bb9-b9af-4c29-b248-83a6c9be6cd3",
+        "created_at": "2026-01-31T09:50:10.453259+00:00",
+        "updated_at": "2026-01-31T09:50:10.453259+00:00"
+      }
+    ]
+  },
+  "competitive_exam_summary": {
+    "row_count": 1,
+    "columns": [
+      {
+        "column_name": "summary_id",
+        "data_type": "uuid",
+        "is_nullable": "NO",
+        "column_default": "gen_random_uuid()"
+      },
+      {
+        "column_name": "academic_year",
+        "data_type": "character varying",
+        "is_nullable": "NO",
+        "column_default": null
+      },
+      {
+        "column_name": "total_students_appeared",
+        "data_type": "integer",
+        "is_nullable": "YES",
+        "column_default": null
+      },
+      {
+        "column_name": "total_students_qualified",
+        "data_type": "integer",
+        "is_nullable": "YES",
+        "column_default": null
+      },
+      {
+        "column_name": "exam_name",
+        "data_type": "character varying",
+        "is_nullable": "NO",
+        "column_default": null
+      },
+      {
+        "column_name": "program_id",
+        "data_type": "uuid",
+        "is_nullable": "NO",
+        "column_default": null
+      },
+      {
+        "column_name": "created_at",
+        "data_type": "timestamp with time zone",
+        "is_nullable": "YES",
+        "column_default": "now()"
+      },
+      {
+        "column_name": "updated_at",
+        "data_type": "timestamp with time zone",
+        "is_nullable": "YES",
+        "column_default": "now()"
+      }
+    ],
+    "sample_rows": [
+      {
+        "summary_id": "567821bc-d9ce-4327-8fd5-8613b39b086b",
+        "academic_year": "2024-2025",
+        "total_students_appeared": 50,
+        "total_students_qualified": 10,
+        "exam_name": "GATE",
+        "program_id": "ce472bb9-b9af-4c29-b248-83a6c9be6cd3",
+        "created_at": "2026-01-31T11:05:22.553494+00:00",
+        "updated_at": "2026-01-31T11:05:22.553494+00:00"
+      }
+    ]
+  },
+  "soft_skill_participation": {
+    "row_count": 1,
+    "columns": [
+      {
+        "column_name": "ssp_id",
+        "data_type": "uuid",
+        "is_nullable": "NO",
+        "column_default": "gen_random_uuid()"
+      },
+      {
+        "column_name": "total_participants",
+        "data_type": "integer",
+        "is_nullable": "YES",
+        "column_default": null
+      },
+      {
+        "column_name": "attendance_percentage",
+        "data_type": "numeric",
+        "is_nullable": "YES",
+        "column_default": null
+      },
+      {
+        "column_name": "certificate_issued",
+        "data_type": "USER-DEFINED",
+        "is_nullable": "NO",
+        "column_default": null
+      },
+      {
+        "column_name": "student_id",
+        "data_type": "uuid",
+        "is_nullable": "NO",
+        "column_default": null
+      },
+      {
+        "column_name": "softskill_id",
+        "data_type": "uuid",
+        "is_nullable": "NO",
+        "column_default": null
+      },
+      {
+        "column_name": "created_at",
+        "data_type": "timestamp with time zone",
+        "is_nullable": "YES",
+        "column_default": "now()"
+      },
+      {
+        "column_name": "updated_at",
+        "data_type": "timestamp with time zone",
+        "is_nullable": "YES",
+        "column_default": "now()"
+      }
+    ],
+    "sample_rows": [
+      {
+        "ssp_id": "e85e26f2-c4b4-4169-a0d1-5229a94b99bb",
+        "total_participants": 100,
+        "attendance_percentage": 90,
+        "certificate_issued": "Yes",
+        "student_id": "1b58fe2f-9f37-4bf7-ab6e-5d3cfc2b9899",
+        "softskill_id": "a6dd993f-c73e-4cb9-ab9f-afb168f36abd",
+        "created_at": "2026-01-31T10:57:48.189224+00:00",
+        "updated_at": "2026-01-31T10:57:48.189224+00:00"
+      }
+    ]
+  },
+  "competitive_exam_activity": {
+    "row_count": 1,
+    "columns": [
+      {
+        "column_name": "cea_id",
+        "data_type": "uuid",
+        "is_nullable": "NO",
+        "column_default": "gen_random_uuid()"
+      },
+      {
+        "column_name": "activity_type",
+        "data_type": "USER-DEFINED",
+        "is_nullable": "NO",
+        "column_default": null
+      },
+      {
+        "column_name": "start_date",
+        "data_type": "date",
+        "is_nullable": "YES",
+        "column_default": null
+      },
+      {
+        "column_name": "end_date",
+        "data_type": "date",
+        "is_nullable": "YES",
+        "column_default": null
+      },
+      {
+        "column_name": "conducted_by",
+        "data_type": "character varying",
+        "is_nullable": "YES",
+        "column_default": null
+      },
+      {
+        "column_name": "exam_id",
+        "data_type": "uuid",
+        "is_nullable": "NO",
+        "column_default": null
+      },
+      {
+        "column_name": "department_id",
+        "data_type": "uuid",
+        "is_nullable": "NO",
+        "column_default": null
+      },
+      {
+        "column_name": "created_at",
+        "data_type": "timestamp with time zone",
+        "is_nullable": "YES",
+        "column_default": "now()"
+      },
+      {
+        "column_name": "updated_at",
+        "data_type": "timestamp with time zone",
+        "is_nullable": "YES",
+        "column_default": "now()"
+      }
+    ],
+    "sample_rows": [
+      {
+        "cea_id": "296bc049-debf-4c45-bf5a-7cf70d48c2ae",
+        "activity_type": "NSS",
+        "start_date": "2024-01-02",
+        "end_date": "2024-01-02",
+        "conducted_by": "Internal",
+        "exam_id": "d411c35a-7246-4ac4-b9a1-868cfc0630e3",
+        "department_id": "8e71566a-03cf-4bb1-ad16-89e0e0d5036a",
+        "created_at": "2026-01-31T09:29:20.273899+00:00",
+        "updated_at": "2026-01-31T09:29:20.273899+00:00"
+      }
+    ]
+  }
+}

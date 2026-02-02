@@ -10,6 +10,8 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@langchain/core": "^1.1.18",
+    "@langchain/groq": "^1.0.4",
     "@langchain/openai": "^1.2.2",
     "@supabase/supabase-js": "^2.93.3",
     "@tailwindcss/vite": "^4.1.18",

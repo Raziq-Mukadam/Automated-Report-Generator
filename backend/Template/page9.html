@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Program Level Criteria</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: Arial, sans-serif;
+      width: 210mm;
+      background: white;
+      font-size: 12px;
+      line-height: 1.6;
+    }
+    .page {
+      width: 100%;
+      padding: 25px 35px 40px 35px;
+    }
+    .header-bar {
+      background: #4472C4;
+      color: white;
+      padding: 8px 16px;
+      text-align: right;
+      font-size: 13px;
+      font-weight: bold;
+      margin-bottom: 15px;
+    }
+    .page-title {
+      font-weight: bold;
+      font-size: 13px;
+      margin-bottom: 12px;
+    }
+    .criterion-title {
+      font-weight: bold;
+      font-size: 12px;
+      margin-top: 15px;
+      margin-bottom: 8px;
+    }
+    .subsection {
+      margin-left: 15px;
+      margin-bottom: 12px;
+      font-size: 11px;
+    }
+    .subsection-title {
+      font-weight: bold;
+      margin-bottom: 4px;
+    }
+    .subsection-content {
+      text-align: justify;
+      line-height: 1.5;
+      color: #0066cc;
+      margin-bottom: 8px;
+    }
+    .subsection-description {
+      text-align: justify;
+      line-height: 1.5;
+      margin-left: 10px;
+      font-size: 10px;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 10px;
+      margin-left: 15px;
+      font-size: 10px;
+      width: calc(100% - 30px);
+    }
+    th, td {
+      border: 1px solid #000;
+      padding: 5px;
+      text-align: center;
+      vertical-align: middle;
+    }
+    th {
+      background: #FBE4D5;
+      font-weight: bold;
+    }
+    .table-title {
+      font-weight: bold;
+      font-size: 10px;
+      margin-top: 10px;
+      margin-bottom: 5px;
+      margin-left: 15px;
+    }
+    .note {
+      margin-left: 15px;
+      margin-top: 10px;
+      font-size: 10px;
+      text-align: justify;
+    }
+    .note-title {
+      font-weight: bold;
+      margin-bottom: 4px;
+    }
+  </style>
+</head>
+<body>
+  <div class="page">
+    <div class="header-bar">NATIONAL BOARD OF ACCREDITATION</div>
+    
+    <div class="page-title">PART B: Program Level Criteria</div>
+    
+    <div class="criterion-title">Criterion 1: Outcome-based Curriculum (120)</div>
+    
+    <div class="subsection">
+      <div class="subsection-title">1.1. Vision, Mission and Program Educational Objectives (PEOs) (35)</div>
+      <div class="subsection-content">(Provide details of vision and mission and program educational objectives.)</div>
+      
+      <div style="margin-top: 8px;">
+        <div class="subsection-title">1.1.1. State the Vision and Mission of the Institute and the Department (05)</div>
+        <div class="subsection-description">{{VISION_MISSION_CONTENT}}</div>
+      </div>
+      
+      <div style="margin-top: 8px;">
+        <div class="subsection-title">1.1.2. State PEOs of the Program (05)</div>
+        <div class="subsection-description">{{PEOS_CONTENT}}</div>
+      </div>
+      
+      <div style="margin-top: 8px;">
+        <div class="subsection-title">1.1.3. Process of Defining Vision, Mission and PEOs (10)</div>
+        <div class="subsection-description">{{PROCESS_CONTENT}}</div>
+      </div>
+      
+      <div style="margin-top: 8px;">
+        <div class="subsection-title">1.1.4. Dissemination of Vision, Mission and PEOs (05)</div>
+        <div class="subsection-description">{{DISSEMINATION_CONTENT}}</div>
+      </div>
+      
+      <div style="margin-top: 8px;">
+        <div class="subsection-title">1.1.5. Mapping of PEOs with Mission (10)</div>
+        <div class="subsection-description">{{MAPPING_CONTENT}}</div>
+        
+        <div class="table-title">Table No.1.1.5.1: Mapping of PEOs with mission.</div>
+        <table>
+          <thead>
+            <tr>
+              <th style="width: 30%;">PEO Statements</th>
+              {{MISSION_HEADERS}}
+            </tr>
+          </thead>
+          <tbody>
+            {{PEO_ROWS}}
+          </tbody>
+        </table>
+        
+        <div class="note">
+          <div class="note-title">Note:</div>
+          <div>M₁, M₂, . . . Mₙ are distinct elements of mission statement. Enter correlation levels as Low (1), Medium (2) and High (3). If there is no correlation, put "-"</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
